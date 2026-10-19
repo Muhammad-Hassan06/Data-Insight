@@ -1,0 +1,32 @@
+# Environment & secrets
+.env
+*.env
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.venv/
+venv/
+ENV/
+
+# Large data & warehouse artifacts
+data/raw/*
+!data/raw/.gitkeep
+data/cleaned/*
+!data/cleaned/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+*.duckdb
+*.parquet
+
+# Logs & Prefect
+*.log
+.prefect/
+
+# OS files
+.DS_Store
+Thumbs.db
