@@ -27,6 +27,9 @@ data/processed/*
 *.log
 .prefect/
 
+# Hackathon guide documentation (large PDF extractions)
+Hackinsight Details/
+
 # OS files
 .DS_Store
 Thumbs.db
