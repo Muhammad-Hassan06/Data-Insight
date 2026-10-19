@@ -23,7 +23,7 @@
 2. **Data Quality Agent** - Automated fix/fill/flag decisions with explanations
 3. **Forecasting Model** - Beats baseline, with uncertainty quantification
 4. **Insight Agent (RAG)** - Cited explanations from trusted sources
-5. **Automated Pipeline** - Hourly runs + Hugging Face dashboard
+5. **Automated Pipeline** - Hourly runs + FastAPI + React dashboard
 
 ---
 
@@ -825,128 +825,198 @@ src/flows/
 
 ---
 
-#### 🔵 **Phase 3C: Gradio Dashboard (2-3 hours)**
+#### 🔵 **Phase 3C: FastAPI + React Dashboard (3-4 hours)**
 
-**Goal:** Public dashboard on Hugging Face Spaces
+**Goal:** Full-stack web dashboard — FastAPI backend serving a React frontend
+
+**Stack:**
+- **Backend:** FastAPI (Python) — serves forecast data, quality status, RAG agent
+- **Frontend:** React (Vite) — interactive charts, city selector, insight chat UI
 
 **Files to Create:**
 ```
-dashboard.py                 (root directory)
+backend/
+├── main.py                  (FastAPI app)
+├── routers/
+│   ├── forecast.py
+│   ├── quality.py
+│   └── agent.py
+└── requirements_api.txt
+
+frontend/
+├── package.json
+├── vite.config.js
+└── src/
+    ├── App.jsx
+    ├── components/
+    │   ├── ForecastChart.jsx
+    │   ├── StatusPanel.jsx
+    │   └── InsightChat.jsx
+    └── api/
+        └── client.js
 ```
 
-**Implementation Steps:**
+**Backend — `backend/main.py`:**
+```python
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from routers import forecast, quality, agent
 
-1. **Create `dashboard.py`**
-   ```python
-   import gradio as gr
-   import duckdb
-   import pandas as pd
-   from datetime import datetime
-   
-   def get_data_freshness():
-       """Check last fetch time per source"""
-       manifest = pd.read_csv("manifest.csv")
-       return manifest[['source', 'fetch_time_utc']].to_html()
-   
-   def get_quality_status():
-       """Show latest DQ summary"""
-       with open("quality_log.jsonl", "r") as f:
-           last_log = f.readlines()[-1]
-       return last_log
-   
-   def get_last_run_status():
-       """Check Prefect last run"""
-       # Read from Prefect API or local log
-       return "Last run: 2026-10-21 16:05 UTC - SUCCESS"
-   
-   def get_forecast_plot(city):
-       """Plot next 24h forecast"""
-       preds = pd.read_parquet("predictions/latest_forecast.parquet")
-       city_preds = preds[preds['city'] == city]
-       
-       import matplotlib.pyplot as plt
-       fig, ax = plt.subplots()
-       ax.plot(city_preds['timestamp'], city_preds['median'], label='Forecast')
-       ax.fill_between(city_preds['timestamp'], 
-                       city_preds['lower'], 
-                       city_preds['upper'], 
-                       alpha=0.3, label='90% Interval')
-       ax.set_ylabel('PM2.5 (μg/m³)')
-       ax.legend()
-       return fig
-   
-   def ask_insight_agent(question):
-       """Query RAG agent"""
-       from src.rag.query_agent import InsightAgent
-       agent = InsightAgent()
-       response = agent.generate_answer(question)
-       return f"{response['answer']}\n\nRow IDs: {response['row_ids']}"
-   
-   # Build interface
-   with gr.Blocks() as demo:
-       gr.Markdown("# PM2.5 Forecast System - Data Insight")
-       
-       with gr.Tab("System Status"):
-           gr.Markdown("## Data Freshness")
-           freshness_html = gr.HTML(get_data_freshness())
-           
-           gr.Markdown("## Quality Status")
-           quality_text = gr.Textbox(value=get_quality_status(), lines=3)
-           
-           gr.Markdown("## Last Pipeline Run")
-           run_status = gr.Textbox(value=get_last_run_status())
-       
-       with gr.Tab("Forecast"):
-           city_dropdown = gr.Dropdown(
-               ["Lahore", "Karachi", "Islamabad", "Peshawar"],
-               label="Select City"
-           )
-           forecast_plot = gr.Plot()
-           city_dropdown.change(get_forecast_plot, inputs=city_dropdown, outputs=forecast_plot)
-       
-       with gr.Tab("Ask Insight Agent"):
-           question_box = gr.Textbox(label="Your Question", placeholder="What PM2.5 level is unhealthy?")
-           answer_box = gr.Textbox(label="Answer", lines=5)
-           ask_btn = gr.Button("Ask")
-           ask_btn.click(ask_insight_agent, inputs=question_box, outputs=answer_box)
-   
-   if __name__ == "__main__":
-       demo.launch()
-   ```
+app = FastAPI(title="HackInsight PM2.5 API")
 
-2. **Test locally:**
-   ```bash
-   python dashboard.py
-   # Open http://localhost:7860
-   ```
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],  # Vite dev server
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
-3. **Deploy to Hugging Face:**
-   ```bash
-   # Rename for HF Spaces
-   cp dashboard.py app.py
-   
-   # Create requirements.txt for Space
-   cat > requirements_hf.txt <<EOF
-   gradio
-   pandas
-   duckdb
-   matplotlib
-   chromadb
-   sentence-transformers
-   EOF
-   
-   # Push to HF Space
-   git remote add hf https://huggingface.co/spaces/YOUR_USERNAME/data-insight
-   git add app.py requirements_hf.txt
-   git commit -m "Deploy dashboard"
-   git push hf main
-   ```
+app.include_router(forecast.router, prefix="/api/forecast")
+app.include_router(quality.router,  prefix="/api/quality")
+app.include_router(agent.router,    prefix="/api/agent")
+```
+
+**Backend — `backend/routers/forecast.py`:**
+```python
+from fastapi import APIRouter
+import pandas as pd
+
+router = APIRouter()
+
+@router.get("/{city}")
+def get_forecast(city: str):
+    """Return latest 24h forecast for a city."""
+    preds = pd.read_parquet("predictions/latest_forecast.parquet")
+    city_preds = preds[preds["city"] == city]
+    return city_preds[["timestamp", "median", "lower", "upper"]].to_dict(orient="records")
+
+@router.get("/status/freshness")
+def get_freshness():
+    manifest = pd.read_csv("manifest.csv")
+    return manifest[["source", "fetch_time_utc", "row_count"]].to_dict(orient="records")
+```
+
+**Backend — `backend/routers/agent.py`:**
+```python
+from fastapi import APIRouter
+from pydantic import BaseModel
+from src.rag.query_agent import InsightAgent
+
+router = APIRouter()
+_agent = None  # lazy init
+
+class QuestionRequest(BaseModel):
+    question: str
+
+@router.post("/ask")
+def ask_agent(req: QuestionRequest):
+    global _agent
+    if _agent is None:
+        _agent = InsightAgent()
+    response = _agent.generate_answer(req.question)
+    return response
+```
+
+**Frontend — `frontend/src/components/ForecastChart.jsx`:**
+```jsx
+import { useEffect, useState } from "react";
+import { LineChart, Line, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } from "recharts";
+
+export default function ForecastChart({ city }) {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch(`/api/forecast/${city}`)
+      .then(r => r.json())
+      .then(setData);
+  }, [city]);
+
+  return (
+    <ResponsiveContainer width="100%" height={320}>
+      <LineChart data={data}>
+        <XAxis dataKey="timestamp" />
+        <YAxis label={{ value: "PM2.5 μg/m³", angle: -90 }} />
+        <Tooltip />
+        <Legend />
+        <Line type="monotone" dataKey="median" stroke="#ef4444" name="Forecast" />
+        <Line type="monotone" dataKey="upper"  stroke="#fca5a5" strokeDasharray="4 4" name="90% Upper" />
+        <Line type="monotone" dataKey="lower"  stroke="#fca5a5" strokeDasharray="4 4" name="90% Lower" />
+      </LineChart>
+    </ResponsiveContainer>
+  );
+}
+```
+
+**Frontend — `frontend/src/components/InsightChat.jsx`:**
+```jsx
+import { useState } from "react";
+
+export default function InsightChat() {
+  const [question, setQuestion] = useState("");
+  const [response, setResponse] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  const ask = async () => {
+    setLoading(true);
+    const res = await fetch("/api/agent/ask", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ question }),
+    });
+    setResponse(await res.json());
+    setLoading(false);
+  };
+
+  return (
+    <div>
+      <input value={question} onChange={e => setQuestion(e.target.value)}
+             placeholder="What PM2.5 level is unhealthy for sensitive groups?" />
+      <button onClick={ask} disabled={loading}>Ask</button>
+      {response && (
+        <div>
+          <p>{response.answer}</p>
+          <small>Row IDs: {response.row_ids?.join(", ")}</small>
+          <small>Sources: {response.citations?.map(c => c.source).join(", ")}</small>
+        </div>
+      )}
+    </div>
+  );
+}
+```
+
+**Run locally:**
+```bash
+# Terminal 1 — backend
+cd backend
+uvicorn main:app --reload --port 8000
+
+# Terminal 2 — frontend
+cd frontend
+npm install
+npm run dev
+# Open http://localhost:5173
+```
+
+**Build for production:**
+```bash
+cd frontend && npm run build
+# FastAPI serves the built dist/ as static files
+```
+
+**`backend/requirements_api.txt`:**
+```
+fastapi
+uvicorn[standard]
+pandas
+duckdb
+pyarrow
+```
 
 **Success Criteria:**
 - ✅ Dashboard shows 3 required elements (freshness, quality, runs)
-- ✅ Live forecast visualization
-- ✅ RAG agent accessible
-- ✅ Public URL working
+- ✅ Live forecast chart with confidence intervals
+- ✅ RAG insight chat accessible
+- ✅ Backend API documented at `/docs` (FastAPI auto-generates Swagger UI)
 
 ---
 
@@ -1129,6 +1199,19 @@ Repository structure:
 │   ├── model/
 │   ├── rag/
 │   └── flows/
+├── backend/
+│   ├── main.py              (FastAPI app)
+│   ├── routers/
+│   │   ├── forecast.py
+│   │   ├── quality.py
+│   │   └── agent.py
+│   └── requirements_api.txt
+├── frontend/
+│   ├── package.json
+│   ├── vite.config.js
+│   └── src/
+│       ├── App.jsx
+│       └── components/
 ├── corpus/
 │   └── *.pdf (trusted documents)
 ├── results/
