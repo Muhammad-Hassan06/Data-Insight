@@ -1,27 +1,27 @@
 # Core Data Warehouse & Validation
-duckdb==1.1.2
-pandera==0.20.4
-pandas==2.2.3
-pyarrow==17.0.0
+duckdb
+pandera
+pandas
+pyarrow
 
 # HTTP & API Client
-httpx==0.27.2
-python-dotenv==1.0.1
+httpx
+python-dotenv
 
 # Modeling & Machine Learning
-scikit-learn==1.5.2
-lightgbm==4.5.0
-numpy==1.26.4
+scikit-learn
+lightgbm
+numpy
 
 # Orchestration & Pipeline
-prefect==2.20.6
+prefect
 
 # RAG & Embeddings
-chromadb==0.5.15
-sentence-transformers==3.1.1
+chromadb
+sentence-transformers
 
 # Dashboard / UI
-gradio==4.44.1
+gradio
 
 # Testing & Code Quality
-pytest==8.3.3
+pytest
