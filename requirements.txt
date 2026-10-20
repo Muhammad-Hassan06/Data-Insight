@@ -21,7 +21,9 @@ chromadb
 sentence-transformers
 
 # Dashboard / UI
-gradio
+fastapi
+uvicorn[standard]
+react  # frontend built separately under frontend/
 
 # Testing & Code Quality
 pytest
