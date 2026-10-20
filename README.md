@@ -1,6 +1,7 @@
 # HackInsight 2026 - PM2.5 Forecasting System
 
-**Team:** Data-Insight  
+**Team:** Khubsoorat Shklein  
+**Members:** Muhammad Feras Malik, Muhammad Hassan, Muhammad Ahmed Khan, Muhammad Sarim Umer  
 **Track:** Air Quality  
 **Problem:** Hourly PM2.5 forecasting and unhealthy-air warning system for Pakistani cities  
 **Cities:** Lahore, Karachi, Islamabad, Peshawar
@@ -1106,8 +1107,14 @@ Code: MIT License
 
 ## 👥 Team
 
-**Data-Insight**  
+**Khubsoorat Shklein**  
 HackInsight 2026 - Air Quality Track
+
+**Team Members:**
+- **Muhammad Feras Malik** - Lead ML Engineer & Pipeline Architect
+- **Muhammad Hassan** - Project Lead & Repository Owner
+- **Muhammad Ahmed Khan** - Data Engineer
+- **Muhammad Sarim Umer** - Backend Developer
 
 **Contact:** [Muhammad Hassan](https://github.com/Muhammad-Hassan06)
 
