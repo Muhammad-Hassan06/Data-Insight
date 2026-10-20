@@ -115,6 +115,27 @@ export default function InsightChat() {
                   <>
                     <p className="message-text">{msg.answer}</p>
 
+                    {msg.urdu_summary && (
+                      <div className="urdu-advisory-box" style={{
+                        marginTop: '10px',
+                        padding: '10px 14px',
+                        background: 'rgba(34, 197, 94, 0.08)',
+                        borderRight: '3px solid #22c55e',
+                        borderRadius: '6px',
+                        direction: 'rtl',
+                        textAlign: 'right',
+                        fontFamily: "'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', 'Segoe UI', Tahoma, sans-serif",
+                        fontSize: '0.92rem',
+                        lineHeight: '1.6',
+                        color: 'var(--text-primary)'
+                      }}>
+                        <div style={{ fontSize: '0.75rem', color: '#22c55e', fontWeight: 600, marginBottom: '4px' }}>
+                          🇵🇰 اردو خلاصہ و ہیلتھ ایڈوائزری:
+                        </div>
+                        {msg.urdu_summary}
+                      </div>
+                    )}
+
                     {msg.citations && msg.citations.length > 0 && (
                       <div className="citations">
                         <div className="citations-title">

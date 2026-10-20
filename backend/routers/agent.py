@@ -102,6 +102,19 @@ def _search_extracted_corpus(query: str) -> Optional[Dict[str, Any]]:
     return None
 
 
+def _generate_urdu_summary(city_name: Optional[str] = None) -> str:
+    """Generate official Urdu health advisory & summary (Pakistan Impact Bonus)."""
+    if city_name == "Lahore":
+        return "لاہور کے ایئر کوالٹی ریکارڈ کے مطابق موسم سرما میں سموگ اور ہوا کے دباؤ کی وجہ سے پی ایم 2.5 کی سطح شدید خطرناک حد (400 مائیکروگرام) تک پہنچ جاتی ہے۔ شہریوں کو این 95 ماسک اور ایئر پیوریفائر کے استعمال کی تاکید کی جاتی ہے۔"
+    elif city_name == "Karachi":
+        return "کراچی کے فضائی ریکارڈ کے مطابق سمندری ہواؤں کے باعث پی ایم 2.5 کی سطح زیادہ تر 20 تا 55 مائیکروگرام رہتی ہے جو نسبتاً محفوظ زون میں شمار ہوتی ہے۔"
+    elif city_name == "Islamabad":
+        return "اسلام آباد میں پہاڑی وادی کی وجہ سے پی ایم 2.5 کی سطح 25 تا 70 مائیکروگرام کے درمیان رہتی ہے۔ خشک موسم میں احتیاط لازم ہے۔"
+    elif city_name == "Peshawar":
+        return "پشاور میں وادی کے جغرافیائی محل وقوع کے باعث موسم سرما میں دھند اور پی ایم 2.5 کی سطح 40 تا 140 مائیکروگرام تک پہنچ جاتی ہے۔ حساس افراد کے لیے خصوصی وارننگ جاری ہے۔"
+    return "عالمی ادارہ صحت (ڈبلیو ایچ او) کے مطابق پی ایم 2.5 کی سالانہ محفوظ حد 5 مائیکروگرام ہے۔ پاکستان میں سموگ کے دنوں میں این 95 ماسک کا استعمال اور غیر ضروری بیرونی سرگرمیوں سے گریز لازمی ہے۔"
+
+
 @router.post("/ask", response_model=AskQuestionResponse)
 async def ask_agent(payload: AskQuestionRequest) -> AskQuestionResponse:
     """
@@ -125,36 +138,11 @@ async def ask_agent(payload: AskQuestionRequest) -> AskQuestionResponse:
     if not any(k in question_lower for k in air_quality_keywords):
         return AskQuestionResponse(
             answer="I don't know. I don't have information about that in my trusted sources or data warehouse.",
+            urdu_summary=None,
             citations=[],
             row_ids=[],
             data_points=0,
         )
-
-    # Attempt ChromaDB agent first
-    agent = _get_insight_agent()
-    if agent and hasattr(agent, "generate_answer"):
-        try:
-            res = agent.generate_answer(question)
-            citations_list = []
-            for meta in res.get("citations", []):
-                citations_list.append(
-                    CitationItem(
-                        source=meta.get("source", "Trusted Document"),
-                        page=meta.get("page") if isinstance(meta.get("page"), int) else None,
-                        section=meta.get("section"),
-                    )
-                )
-            return AskQuestionResponse(
-                answer=res.get("answer", ""),
-                citations=citations_list,
-                row_ids=res.get("row_ids", []),
-                data_points=res.get("data_points", 0),
-            )
-        except Exception:
-            pass
-
-    # Extract match from pre-extracted corpus
-    match = _search_extracted_corpus(question)
 
     # City-specific grounding checks
     city_context = ""
@@ -173,6 +161,33 @@ async def ask_agent(payload: AskQuestionRequest) -> AskQuestionResponse:
         }
         city_context = f"According to warehouse sensor records for {city_name}, {city_ranges[city_name]}."
 
+    # Attempt ChromaDB agent first
+    agent = _get_insight_agent()
+    if agent and hasattr(agent, "generate_answer"):
+        try:
+            res = agent.generate_answer(question)
+            citations_list = []
+            for meta in res.get("citations", []):
+                citations_list.append(
+                    CitationItem(
+                        source=meta.get("source", "Trusted Document"),
+                        page=meta.get("page") if isinstance(meta.get("page"), int) else None,
+                        section=meta.get("section"),
+                    )
+                )
+            return AskQuestionResponse(
+                answer=res.get("answer", ""),
+                urdu_summary=_generate_urdu_summary(city_name),
+                citations=citations_list,
+                row_ids=res.get("row_ids", []),
+                data_points=res.get("data_points", 0),
+            )
+        except Exception:
+            pass
+
+    # Extract match from pre-extracted corpus
+    match = _search_extracted_corpus(question)
+
     if match:
         answer = f"According to {match['source']} (p.{match['page']}): {match['text']}"
         if city_context:
@@ -180,6 +195,7 @@ async def ask_agent(payload: AskQuestionRequest) -> AskQuestionResponse:
 
         return AskQuestionResponse(
             answer=answer,
+            urdu_summary=_generate_urdu_summary(city_name),
             citations=[CitationItem(source=match["source"], page=match["page"])],
             row_ids=[1024, 1025, 1026, 2048, 2049],
             data_points=338985,
@@ -198,6 +214,7 @@ async def ask_agent(payload: AskQuestionRequest) -> AskQuestionResponse:
 
     return AskQuestionResponse(
         answer=answer,
+        urdu_summary=_generate_urdu_summary(city_name),
         citations=[
             CitationItem(source="WHO Air Quality Guidelines", page=12),
             CitationItem(source="Pakistan EPA Smog Advisory", page=3),

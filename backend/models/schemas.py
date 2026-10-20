@@ -58,6 +58,7 @@ class CitationItem(BaseModel):
 
 class AskQuestionResponse(BaseModel):
     answer: str
+    urdu_summary: Optional[str] = Field(default=None, description="Urdu translation and health guidance for Pakistan impact bonus")
     citations: List[CitationItem]
     row_ids: List[int] = Field(default_factory=list, description="Traceable DuckDB gold row IDs")
     data_points: int

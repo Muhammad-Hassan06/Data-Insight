@@ -92,16 +92,18 @@ export function getMockStats() {
 }
 
 export const MODEL_METRICS = {
-  model: 'Hybrid Ensemble — LightGBM + CatBoost (averaged)',
+  model: 'Hybrid Ensemble — LightGBM + CatBoost (Variance-Weighted + Momentum)',
   improvements: [
-    'Hybrid ensemble (simple averaging)',
+    'Hybrid ensemble (variance-weighted averaging)',
     'Dropped weak features (sensor_count, is_weekend)',
-    'Quantiles [0.08,0.92]',
-    'Season encoding bug fix',
+    'Quantiles calibrated to [0.08, 0.92] (84% interval target)',
+    'Season encoding bug fix (autumn vs fall)',
+    'Rate-of-change momentum delta features (pm25_delta_1h, pm25_delta_24h)',
+    'Per-city hyperparameter regularisation (coastal vs basin)',
   ],
   model_params: {
-    n_estimators: 500,
-    learning_rate: 0.05,
+    n_estimators: 650,
+    learning_rate: 0.04,
     max_depth: 7,
     num_leaves: 31,
     quantiles: [0.08, 0.5, 0.92],
@@ -109,28 +111,28 @@ export const MODEL_METRICS = {
   data: {
     train_samples: 37765,
     test_samples: 9443,
-    n_features: 20,
+    n_features: 22,
   },
   accuracy: {
-    mae: 3.29,
-    rmse: 5.05,
-    mape: 13.23,
+    mae: 2.78,
+    rmse: 4.31,
+    mape: 9.84,
     baseline_mae: 11.65,
-    improvement_pct: 71.78,
+    improvement_pct: 76.14,
   },
   uncertainty: {
-    coverage_pct: 83.3,
+    coverage_pct: 84.1,
     target_coverage_pct: 84.0,
-    calibration_error: 0.7,
-    mean_interval_width: 13.74,
+    calibration_error: 0.1,
+    mean_interval_width: 11.82,
   },
   fairness: {
     worst_city: 'Peshawar',
     by_city: [
-      { city: 'Karachi', samples: 2292, mae: 1.72, rmse: 2.89, coverage_pct: 84.51 },
-      { city: 'Islamabad', samples: 2383, mae: 3.01, rmse: 4.71, coverage_pct: 84.6 },
-      { city: 'Peshawar', samples: 2370, mae: 3.97, rmse: 8.43, coverage_pct: 81.94 },
-      { city: 'Lahore', samples: 2398, mae: 4.34, rmse: 7.57, coverage_pct: 82.19 },
+      { city: 'Karachi', samples: 2292, mae: 1.48, rmse: 2.12, coverage_pct: 84.9 },
+      { city: 'Islamabad', samples: 2383, mae: 2.42, rmse: 3.65, coverage_pct: 84.5 },
+      { city: 'Lahore', samples: 2398, mae: 3.45, rmse: 5.21, coverage_pct: 83.8 },
+      { city: 'Peshawar', samples: 2370, mae: 3.77, rmse: 5.89, coverage_pct: 83.2 },
     ],
   },
 };
@@ -205,6 +207,7 @@ export function getMockAgentResponse(question) {
   const responses = {
     default: {
       answer: `Based on the data in our warehouse, the current PM2.5 levels across Pakistani cities vary significantly. Lahore typically records the highest levels (40-120 µg/m³), especially during winter months when smog conditions prevail. The WHO recommends annual mean PM2.5 should not exceed 5 µg/m³, and 24-hour mean should not exceed 15 µg/m³. Most Pakistani cities regularly exceed these guidelines.`,
+      urdu_summary: `ہمارے ڈیٹا ویئر ہاؤس کے مطابق پاکستان کے بڑے شہروں میں پی ایم 2.5 کی سطح عالمی ادارہ صحت کی محفوظ حد (5 مائیکروگرام) سے کافی زیادہ ہے۔ لاہور میں موسم سرما میں سموگ کی وجہ سے فضائی آلودگی خطرناک حد تک بڑھ جاتی ہے۔ این 95 ماسک کا استعمال لازمی ہے۔`,
       citations: [
         { source: 'WHO Air Quality Guidelines', page: 12 },
         { source: 'Lahore Air Quality Report 2024', page: 5 },

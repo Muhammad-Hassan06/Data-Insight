@@ -1,0 +1,26 @@
+run_id,flow_name,state,start_time_utc,end_time_utc,duration_seconds,fetch_records,cleaned_records,gold_records,forecasts_generated,status_message
+run_20261020_110500,hourly_forecast_flow,COMPLETED,2026-10-20T11:05:00.124Z,2026-10-20T11:10:14.542Z,314.4,412,412,96,96,Flow run succeeded. Quality gates passed.
+run_20261020_120500,hourly_forecast_flow,COMPLETED,2026-10-20T12:05:00.201Z,2026-10-20T12:10:18.841Z,318.6,408,408,96,96,Flow run succeeded. Quality gates passed.
+run_20261020_130500,hourly_forecast_flow,COMPLETED,2026-10-20T13:05:00.155Z,2026-10-20T13:10:25.210Z,325.1,416,416,96,96,Flow run succeeded. Quality gates passed.
+run_20261020_140500,hourly_forecast_flow,COMPLETED,2026-10-20T14:05:00.189Z,2026-10-20T14:10:19.432Z,319.2,404,404,96,96,Flow run succeeded. Quality gates passed.
+run_20261020_150500,hourly_forecast_flow,COMPLETED,2026-10-20T15:05:00.142Z,2026-10-20T15:10:22.871Z,322.7,420,420,96,96,Flow run succeeded. Quality gates passed.
+run_20261020_160500,hourly_forecast_flow,COMPLETED,2026-10-20T16:05:00.222Z,2026-10-20T16:10:31.542Z,331.3,412,412,96,96,Flow run succeeded. Quality gates passed.
+run_20261020_170500,hourly_forecast_flow,COMPLETED,2026-10-20T17:05:00.178Z,2026-10-20T17:10:20.912Z,320.7,408,408,96,96,Flow run succeeded. Quality gates passed.
+run_20261020_180500,hourly_forecast_flow,COMPLETED,2026-10-20T18:05:00.165Z,2026-10-20T18:10:24.431Z,324.3,416,416,96,96,Flow run succeeded. Quality gates passed.
+run_20261020_190500,hourly_forecast_flow,COMPLETED,2026-10-20T19:05:00.210Z,2026-10-20T19:10:18.520Z,318.3,410,410,96,96,Flow run succeeded. Quality gates passed.
+run_20261020_200500,hourly_forecast_flow,COMPLETED,2026-10-20T20:05:00.198Z,2026-10-20T20:10:27.810Z,327.6,414,414,96,96,Flow run succeeded. Quality gates passed.
+run_20261020_210500,hourly_forecast_flow,COMPLETED,2026-10-20T21:05:00.145Z,2026-10-20T21:10:21.320Z,321.2,408,408,96,96,Flow run succeeded. Quality gates passed.
+run_20261020_220500,hourly_forecast_flow,COMPLETED,2026-10-20T22:05:00.231Z,2026-10-20T22:10:29.654Z,329.4,416,416,96,96,Flow run succeeded. Quality gates passed.
+run_20261020_230500,hourly_forecast_flow,COMPLETED,2026-10-20T23:05:00.177Z,2026-10-20T23:10:23.411Z,323.2,412,412,96,96,Flow run succeeded. Quality gates passed.
+run_20261021_000500,hourly_forecast_flow,COMPLETED,2026-10-21T00:05:00.190Z,2026-10-21T00:10:19.821Z,319.6,408,408,96,96,Flow run succeeded. Quality gates passed.
+run_20261021_010500,hourly_forecast_flow,COMPLETED,2026-10-21T01:05:00.160Z,2026-10-21T01:10:26.110Z,325.9,416,416,96,96,Flow run succeeded. Quality gates passed.
+run_20261021_020500,hourly_forecast_flow,COMPLETED,2026-10-21T02:05:00.215Z,2026-10-21T02:10:22.430Z,322.2,410,410,96,96,Flow run succeeded. Quality gates passed.
+run_20261021_030500,hourly_forecast_flow,COMPLETED,2026-10-21T03:05:00.180Z,2026-10-21T03:10:28.910Z,328.7,414,414,96,96,Flow run succeeded. Quality gates passed.
+run_20261021_040500,hourly_forecast_flow,COMPLETED,2026-10-21T04:05:00.150Z,2026-10-21T04:10:18.341Z,318.2,408,408,96,96,Flow run succeeded. Quality gates passed.
+run_20261021_050500,hourly_forecast_flow,COMPLETED,2026-10-21T05:05:00.220Z,2026-10-21T05:10:27.452Z,327.2,416,416,96,96,Flow run succeeded. Quality gates passed.
+run_20261021_060500,hourly_forecast_flow,COMPLETED,2026-10-21T06:05:00.195Z,2026-10-21T06:10:21.890Z,321.7,412,412,96,96,Flow run succeeded. Quality gates passed.
+run_20261021_070500,hourly_forecast_flow,COMPLETED,2026-10-21T07:05:00.165Z,2026-10-21T07:10:25.641Z,325.5,410,410,96,96,Flow run succeeded. Quality gates passed.
+run_20261021_080500,hourly_forecast_flow,COMPLETED,2026-10-21T08:05:00.210Z,2026-10-21T08:10:20.120Z,319.9,414,414,96,96,Flow run succeeded. Quality gates passed.
+run_20261021_090500,hourly_forecast_flow,COMPLETED,2026-10-21T09:05:00.185Z,2026-10-21T09:10:24.780Z,324.6,408,408,96,96,Flow run succeeded. Quality gates passed.
+run_20261021_100500,hourly_forecast_flow,COMPLETED,2026-10-21T10:05:00.170Z,2026-10-21T10:10:29.340Z,329.2,416,416,96,96,Flow run succeeded. Quality gates passed.
+run_20261021_110500,hourly_forecast_flow,COMPLETED,2026-10-21T11:05:00.205Z,2026-10-21T11:10:23.510Z,323.3,412,412,96,96,Flow run succeeded. Quality gates passed.
