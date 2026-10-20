@@ -1,0 +1,65 @@
+{
+  "model": "LightGBM Quantile Regression",
+  "model_params": {
+    "n_estimators": 500,
+    "learning_rate": 0.05,
+    "max_depth": 7,
+    "num_leaves": 31,
+    "quantiles": [
+      0.1,
+      0.5,
+      0.9
+    ]
+  },
+  "data": {
+    "train_samples": 37765,
+    "test_samples": 9443,
+    "n_features": 22
+  },
+  "accuracy": {
+    "mae": 3.29,
+    "rmse": 5.05,
+    "mape": 13.23,
+    "baseline_mae": 11.65,
+    "improvement_pct": 71.78
+  },
+  "uncertainty": {
+    "coverage_pct": 76.29,
+    "target_coverage_pct": 80.0,
+    "calibration_error": 3.71,
+    "mean_interval_width": 9.37
+  },
+  "fairness": {
+    "worst_city": "Lahore",
+    "by_city": [
+      {
+        "city": "Islamabad",
+        "samples": 1236,
+        "mae": 3.01,
+        "rmse": 4.67,
+        "coverage_pct": 76.54
+      },
+      {
+        "city": "Karachi",
+        "samples": 1145,
+        "mae": 1.72,
+        "rmse": 2.26,
+        "coverage_pct": 77.99
+      },
+      {
+        "city": "Lahore",
+        "samples": 1251,
+        "mae": 4.34,
+        "rmse": 6.34,
+        "coverage_pct": 74.26
+      },
+      {
+        "city": "Peshawar",
+        "samples": 1223,
+        "mae": 3.97,
+        "rmse": 5.77,
+        "coverage_pct": 76.53
+      }
+    ]
+  }
+}
