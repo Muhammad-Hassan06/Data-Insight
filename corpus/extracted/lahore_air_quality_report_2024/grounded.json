@@ -1,0 +1,167 @@
+[
+  {
+    "type": "picture",
+    "level": 1,
+    "text": "",
+    "grounding": [
+      {
+        "page": 1,
+        "bbox": {
+          "l": 685.648681640625,
+          "t": 593.3883781433105,
+          "r": 728.6805419921875,
+          "b": 553.3413963317871
+        }
+      }
+    ],
+    "media": {
+      "image": {
+        "path": "/content/output/lahore_air_quality_report_2024/images/lahore_air_quality_report_2024_image_1_p1.png",
+        "type": "image",
+        "page": 1
+      }
+    }
+  },
+  {
+    "type": "section_header",
+    "level": 1,
+    "text": "AIR QUALITY INDEX (AQI) OF LAHORE RECORDED WITH AQMS ON 18.05.2024 (BASED ON PREVIOUS 24 HOURS DATA)",
+    "grounding": [
+      {
+        "page": 1,
+        "bbox": {
+          "l": 31.44,
+          "t": 591.6999999999999,
+          "r": 567.6643199999999,
+          "b": 580.66
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "table",
+    "level": 1,
+    "text": "| Station name & Location                                                 | Parameter used to calculate AQI   |   PEQS value \u00b5g/m 3 |   Conc. (\u00b5g/m 3 ) used to calculate AQI |   AQI |\n|-------------------------------------------------------------------------|-----------------------------------|---------------------|-----------------------------------------|-------|\n| Mobile AQMS (Atchison college canal road lahore)                        | Particulate matter (PM2.5)        |                  35 |                                      97 |   170 |\n| Punjab University, Lahore (college of earth and environmental sciences) | Particulate matter (PM2.5)        |                  35 |                                      74 |   154 |\n| Shallay Valley Range Road Rawalpindi                                    | Particulate matter (PM10)         |                 150 |                                     157 |   104 |",
+    "grounding": [
+      {
+        "page": 1,
+        "bbox": {
+          "l": 32.76136016845703,
+          "t": 573.5941123962402,
+          "r": 598.4642333984375,
+          "b": 317.2773742675781
+        }
+      }
+    ],
+    "media": {
+      "table": {
+        "csv": "/content/output/lahore_air_quality_report_2024/tables/lahore_air_quality_report_2024_table_1_p1.csv",
+        "html": "/content/output/lahore_air_quality_report_2024/tables/lahore_air_quality_report_2024_table_1_p1.html",
+        "rows": 3,
+        "cols": 5,
+        "page": 1
+      }
+    }
+  },
+  {
+    "type": "caption",
+    "level": 2,
+    "text": "AQI Limits of EPA, Punjab",
+    "grounding": [
+      {
+        "page": 1,
+        "bbox": {
+          "l": 643.63,
+          "t": 533.0699199999999,
+          "r": 759.1907200000002,
+          "b": 524.980305732484
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "table",
+    "level": 1,
+    "text": "| 00-50   | Good                          |\n|---------|-------------------------------|\n| 51-100  | Satisfactory                  |\n| 101-150 | Moderate                      |\n| 151-200 | Unhealthy for sensitive group |\n| 201-300 | Unhealthy                     |\n| 301-400 | Very unhealthy                |\n| 401-500 | Hazardous                     |",
+    "grounding": [
+      {
+        "page": 1,
+        "bbox": {
+          "l": 632.2337036132812,
+          "t": 518.4719390869141,
+          "r": 766.8494262695312,
+          "b": 395.11720275878906
+        }
+      }
+    ],
+    "media": {
+      "table": {
+        "csv": "/content/output/lahore_air_quality_report_2024/tables/lahore_air_quality_report_2024_table_2_p1.csv",
+        "html": "/content/output/lahore_air_quality_report_2024/tables/lahore_air_quality_report_2024_table_2_p1.html",
+        "rows": 6,
+        "cols": 2,
+        "page": 1
+      }
+    }
+  },
+  {
+    "type": "picture",
+    "level": 1,
+    "text": "AQI Recorded With AQMS\n14.05.2024\n15.05.2024\n18.05.2024 (Mobile van shifted to\n16.05.2024\n17.05.2024\n(Mobile AQMS Shifted to Centeral\nCathedral hall school mall road\nAtichson College)\nModel school, Lower Mall, Lahore)\nLahore\n\u25a0 Punjab University, (College of Earth & Environmental Sciences)\n\u25a0 Mobile AQMS\n\u25a0 Rawalpindi",
+    "grounding": [
+      {
+        "page": 1,
+        "bbox": {
+          "l": 30.42688751220703,
+          "t": 310.01898193359375,
+          "r": 752.1153564453125,
+          "b": 118.17453002929688
+        }
+      }
+    ],
+    "media": {
+      "image": {
+        "path": "/content/output/lahore_air_quality_report_2024/images/lahore_air_quality_report_2024_image_2_p1.png",
+        "type": "image",
+        "page": 1,
+        "ocr_text": "AQI Recorded With AQMS\n14.05.2024\n15.05.2024\n18.05.2024 (Mobile van shifted to\n16.05.2024\n17.05.2024\n(Mobile AQMS Shifted to Centeral\nCathedral hall school mall road\nAtichson College)\nModel school, Lower Mall, Lahore)\nLahore\n\u25a0 Punjab University, (College of Earth & Environmental Sciences)\n\u25a0 Mobile AQMS\n\u25a0 Rawalpindi"
+      }
+    }
+  },
+  {
+    "type": "text",
+    "level": 2,
+    "text": "Note: i. The report prepared based on instruments generated data and AQI calculated based on breakpoints of EPA Punjab",
+    "grounding": [
+      {
+        "page": 1,
+        "bbox": {
+          "l": 31.44,
+          "t": 104.59872000000001,
+          "r": 510.31104000000005,
+          "b": 97.57352866242036
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "Disclaimer: Any other data from any source presenting ambient air quality of any city of Punjab is neither verified nor approved by the EPA Punjab",
+    "grounding": [
+      {
+        "page": 1,
+        "bbox": {
+          "l": 31.44,
+          "t": 93.98112000000003,
+          "r": 757.9608,
+          "b": 70.39903292817678
+        }
+      }
+    ],
+    "media": {}
+  }
+]

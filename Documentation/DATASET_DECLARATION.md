@@ -23,15 +23,18 @@
 ### Source 3: RAG Corpus (Trusted Knowledge Base for Insight Agent)
 - **Name:** Air Quality Guidelines and Reports
 - **Documents:**
-  - WHO Air Quality Guidelines (Pakistan EPA)
+  - WHO Air Quality Guidelines
   - Pakistan EPA Smog Advisory
   - Lahore Air Quality Report 2024
   - Health Impacts of PM2.5 Exposure (Research Paper)
-- **Publisher:** WHO, Pakistan EPA, Punjab EPA, Academic Journals
+  - Health Under Haze: Symptom Burden Among Adult Outpatients During 2024-2025 Smog Season
+  - Unveiling Karachi Air Pollution (PAQI Report)
+  - Unveiling Pakistan Air Pollution (PAQI National Report)
+- **Publisher:** WHO, Pakistan EPA, Punjab EPA, PAQI, Academic Journals
 - **Licence:** Public Domain / Open Access / CC-BY
 - **Purpose:** Provide cited explanations for Environmental Protection Officers
-- **Volume:** 4 PDF documents, 33 pages, 269 elements, 11 tables
-- **Implementation:** ChromaDB vector database with 207 text chunks
+- **Volume:** 7 PDF documents covering WHO guidelines, EPA policies, city-specific reports, and health research
+- **Implementation:** ChromaDB vector database with sentence-transformer embeddings (all-MiniLM-L6-v2)
 
 ---
 
@@ -41,7 +44,7 @@
   - PM2.5 Data: 338,985 hourly observations (4 cities, 2022-2024)
   - Weather Data: 70,176 hourly records
   - Model-Ready Dataset: 47,208 rows with engineered features
-  - RAG Corpus: 4 trusted documents, 207 text chunks
+  - RAG Corpus: 7 trusted documents with comprehensive coverage of air quality guidelines, health impacts, and city-specific reports
 
 ### Fit for Problem and Primary User
 - Ground-level PM2.5 from physical monitors reflects what citizens breathe, while ERA5 meteorological covariates (boundary layer height, temperature inversions, wind speed, relative humidity) explain particulate dispersion and accumulation during smog episodes.

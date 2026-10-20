@@ -627,9 +627,16 @@ src/rag/
 ```
 
 **Corpus:**
-- ✅ 4 trusted PDF documents (WHO, EPA, Lahore data, health impacts)
-- ✅ 207 document chunks in ChromaDB
-- ✅ 33 total pages, 269 elements, 11 tables
+- ✅ 7 trusted PDF documents:
+  - WHO Air Quality Guidelines
+  - Pakistan EPA Smog Advisory
+  - Lahore Air Quality Report 2024
+  - Health Impacts of PM2.5 Exposure
+  - Health Under Haze: Symptom Burden Among Adult Outpatients During 2024-2025 Smog Season
+  - Unveiling Karachi Air Pollution (PAQI Report)
+  - Unveiling Pakistan Air Pollution (PAQI National Report)
+- ✅ ChromaDB vector database with sentence-transformer embeddings
+- ✅ Comprehensive coverage of guidelines, health impacts, and city-specific reports
 
 **Test Results:** ✅ 4/4 PASSED
 - ✅ Citation test: Cites trusted sources with page numbers

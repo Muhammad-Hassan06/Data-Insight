@@ -1,0 +1,1756 @@
+[
+  {
+    "type": "section_header",
+    "level": 1,
+    "text": "WHO global air quality guidelines",
+    "grounding": [
+      {
+        "page": 1,
+        "bbox": {
+          "l": 54.9213,
+          "t": 282.0134,
+          "r": 297.54690000000005,
+          "b": 152.52350632447292
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "Particulate matter (PM2.5 and PM10), ozone, nitrogen dioxide, sulfur dioxide and carbon monoxide",
+    "grounding": [
+      {
+        "page": 1,
+        "bbox": {
+          "l": 54.9213,
+          "t": 139.19708830000002,
+          "r": 219.16709847000007,
+          "b": 108.65770856461961
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "picture",
+    "level": 1,
+    "text": "World Health<br>Organization",
+    "grounding": [
+      {
+        "page": 1,
+        "bbox": {
+          "l": 321.00909415593753,
+          "t": 55.509842751120686,
+          "r": 423.89788328505193,
+          "b": 23.397766787715227
+        }
+      }
+    ],
+    "media": {
+      "image": {
+        "path": "/content/output/pakistan_epa_smog_advisory/images/pakistan_epa_smog_advisory_image_1_p1.png",
+        "type": "image",
+        "page": 1,
+        "ocr_text": "World Health<br>Organization"
+      }
+    }
+  },
+  {
+    "type": "section_header",
+    "level": 1,
+    "text": "WHO global air quality guidelines",
+    "grounding": [
+      {
+        "page": 3,
+        "bbox": {
+          "l": 54.9213,
+          "t": 437.07349999999997,
+          "r": 297.54690000000005,
+          "b": 307.58360632447295
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "Particulate matter (PM2.5 and PM10), ozone, nitrogen dioxide, sulfur dioxide and carbon monoxide",
+    "grounding": [
+      {
+        "page": 3,
+        "bbox": {
+          "l": 54.9213,
+          "t": 299.4539883,
+          "r": 219.16709847000007,
+          "b": 268.9147085646196
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "picture",
+    "level": 1,
+    "text": "World Health<br>Organization",
+    "grounding": [
+      {
+        "page": 3,
+        "bbox": {
+          "l": 319.30728720590196,
+          "t": 56.83833909044529,
+          "r": 424.95977106701014,
+          "b": 21.28789168079163
+        }
+      }
+    ],
+    "media": {
+      "image": {
+        "path": "/content/output/pakistan_epa_smog_advisory/images/pakistan_epa_smog_advisory_image_2_p3.png",
+        "type": "image",
+        "page": 3,
+        "ocr_text": "World Health<br>Organization"
+      }
+    }
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "WHO global air quality guidelines: particulate matter (PM2.5 and PM10), ozone, nitrogen dioxide, sulfur dioxide and carbon monoxide. Executive summary",
+    "grounding": [
+      {
+        "page": 4,
+        "bbox": {
+          "l": 59.5275,
+          "t": 613.4603116999999,
+          "r": 394.0270855499999,
+          "b": 596.346322416132
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "ISBN 978-92-4-003442-6 (print version)",
+    "grounding": [
+      {
+        "page": 4,
+        "bbox": {
+          "l": 59.5275,
+          "t": 571.2975117,
+          "r": 191.42450421000004,
+          "b": 564.850222416132
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "section_header",
+    "level": 2,
+    "text": "\u00a9 World Health Organization 2021",
+    "grounding": [
+      {
+        "page": 4,
+        "bbox": {
+          "l": 59.5275,
+          "t": 539.8015117,
+          "r": 173.26827483000005,
+          "b": 533.3542224161321
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "Some rights reserved. This work is available under the Creative Commons Attribution-NonCommercialShareAlike 3.0 IGO licence (CC BY-NC-SA 3.0 IGO ; https://creativecommons.org/licenses/by-nc-sa/3.0/igo).",
+    "grounding": [
+      {
+        "page": 4,
+        "bbox": {
+          "l": 59.5275,
+          "t": 526.3392117,
+          "r": 394.018666,
+          "b": 510.74902241613194
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "Under the terms of this licence, you may copy, redistribute and adapt the work for non-commercial purposes, provided the work is appropriately cited, as indicated below. In any use of this work, there should be no suggestion that WHO endorses any specific organization, products or services. The use of the WHO logo is not permitted. If you adapt the work, then you must license your work under the same or equivalent Creative Commons licence. If you create a translation of this work, you should add the following disclaimer along with the suggested citation : \"This translation was not created by the World Health Organization (WHO). WHO is not responsible for the content or accuracy of this translation. The original English edition shall be the binding and authentic edition\".",
+    "grounding": [
+      {
+        "page": 4,
+        "bbox": {
+          "l": 59.5275,
+          "t": 503.1245117,
+          "r": 394.04688683999905,
+          "b": 428.410522416132
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "Any mediation relating to disputes arising under the licence shall be conducted in accordance with the mediation rules of the World Intellectual Property Organization . (http://www.wipo.int/amc/en/mediation/ rules/)",
+    "grounding": [
+      {
+        "page": 4,
+        "bbox": {
+          "l": 59.5275,
+          "t": 417.58601170000003,
+          "r": 394.02619217999984,
+          "b": 391.63392241613195
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "Suggested citation. WHO global air quality guidelines. Particulate matter (PM 2.5 and PM10), ozone, nitrogen dioxide, sulfur dioxide and carbon monoxide. Executive summary. Geneva: World Health Organization; 2021. Licence: CC BY-NC-SA 3.0 IGO.",
+    "grounding": [
+      {
+        "page": 4,
+        "bbox": {
+          "l": 59.5275,
+          "t": 380.8093117,
+          "r": 394.005184,
+          "b": 354.857322416132
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "Cataloguing-in-Publication (CIP) data. CIP data are available at http://apps.who.int/iris.",
+    "grounding": [
+      {
+        "page": 4,
+        "bbox": {
+          "l": 59.5275,
+          "t": 344.0328117,
+          "r": 342.9623596,
+          "b": 337.585522416132
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "Sales, rights and licensing. To purchase WHO publications, see http://apps.who.int/bookorders. To submit requests for commercial use and queries on rights and licensing, see http://www.who.int/about/licensing.",
+    "grounding": [
+      {
+        "page": 4,
+        "bbox": {
+          "l": 59.5276,
+          "t": 326.7609117,
+          "r": 394.0187596,
+          "b": 310.56122241613195
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "Third-party materials. If you wish to reuse material from this work that is attributed to a third party, such as tables, figures or images, it is your responsibility to determine whether permission is needed for that reuse and to obtain permission from the copyright holder. The risk of claims resulting from infringement of any third-party-owned component in the work rests solely with the user.",
+    "grounding": [
+      {
+        "page": 4,
+        "bbox": {
+          "l": 59.5276,
+          "t": 299.7367117,
+          "r": 394.05128259999987,
+          "b": 264.03222241613196
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "General disclaimers. The designations employed and the presentation of the material in this publication do not imply the expression of any opinion whatsoever on the part of WHO concerning the legal status of any country, territory, city or area or of its authorities, or concerning the delimitation of its frontiers or boundaries. Dotted and dashed lines on maps represent approximate border lines for which there may not yet be full agreement.",
+    "grounding": [
+      {
+        "page": 4,
+        "bbox": {
+          "l": 59.5276,
+          "t": 253.2077117,
+          "r": 394.01213802999956,
+          "b": 207.75092241613197
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "The mention of specific companies or of certain manufacturers' products does not imply that they are endorsed or recommended by WHO in preference to others of a similar nature that are not mentioned. Errors and omissions excepted, the names of proprietary products are distinguished by initial capital letters.",
+    "grounding": [
+      {
+        "page": 4,
+        "bbox": {
+          "l": 59.5276,
+          "t": 196.92631170000004,
+          "r": 394.0562158200006,
+          "b": 170.974322416132
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "All reasonable precautions have been taken by WHO to verify the information contained in this publication. However, the published material is being distributed without warranty of any kind, either expressed or implied. The responsibility for the interpretation and use of the material lies with the reader. In no event shall WHO be liable for damages arising from its use.",
+    "grounding": [
+      {
+        "page": 4,
+        "bbox": {
+          "l": 59.5276,
+          "t": 160.1497117,
+          "r": 394.05272335000126,
+          "b": 124.44532241613194
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "The global burden of disease associated with air pollution exposure exacts a massive toll on human health worldwide: exposure to air pollution is estimated to cause millions of deaths and lost years of healthy life annually. The burden of disease attributable to air pollution is now estimated to be on a par with other major global health risks such as unhealthy diet and tobacco smoking, and air pollution is now recognized as the single biggest environmental threat to human health.",
+    "grounding": [
+      {
+        "page": 5,
+        "bbox": {
+          "l": 59.5276,
+          "t": 571.669,
+          "r": 394.06159251999964,
+          "b": 482.80687992667276
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "Despite some notable improvements in air quality, the global toll in deaths and lost years of healthy life has barely declined since the 1990s. While air quality has markedly improved in high-income countries over this period, it has generally deteriorated in most low- and middle-income countries, in step with large-scale urbanization and economic development. In addition, the global prevalence of noncommunicable diseases (NCDs) as a result of population ageing and lifestyle changes has grown rapidly, and NCDs are now the leading causes of death and disability worldwide. NCDs comprise a broad range of diseases affecting the cardiovascular, neurological, respiratory and other organ systems. Air pollution increases morbidity and mortality from cardiovascular and respiratory disease and from lung cancer, with increasing evidence of effects on other organ systems. The burden of disease resulting from air pollution also imposes a significant economic burden. As a result, governments worldwide are seeking to improve air quality and reduce the public health burden and costs associated with air pollution.",
+    "grounding": [
+      {
+        "page": 5,
+        "bbox": {
+          "l": 59.5276,
+          "t": 464.469,
+          "r": 394.0913256199995,
+          "b": 281.80687992667276
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "Since 1987, WHO has periodically issued health-based air quality guidelines to assist governments and civil society to reduce human exposure to air pollution and its adverse effects. The WHO air quality guidelines were last published in 2006. Air quality guidelines - global update 2005. Particulate matter, ozone, nitrogen dioxide and sulfur dioxide (WHO Regional Office for Europe, 2006) provided health-based guideline levels for the major health-damaging air pollutants, including particulate matter (PM)1, ozone (O3), nitrogen dioxide (NO2) and sulfur dioxide (SO2). Global update 20052 has had a significant impact on pollution abatement policies all over the world. Their publication led to the first universal frame of reference.",
+    "grounding": [
+      {
+        "page": 5,
+        "bbox": {
+          "l": 59.5276,
+          "t": 263.469,
+          "r": 394.04630399999917,
+          "b": 134.4068799266728
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "footnote",
+    "level": 1,
+    "text": "1 That is, PM 2.5 (particles with an aerodynamic diameter of \u2264 2.5 \u03bcm) and PM 10 (particles with an aerodynamic diameter of \u2264 10 \u03bcm).",
+    "grounding": [
+      {
+        "page": 5,
+        "bbox": {
+          "l": 59.5276,
+          "t": 101.78959999999995,
+          "r": 394.6243000000003,
+          "b": 88.1481866177819
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "footnote",
+    "level": 1,
+    "text": "2 Air quality guidelines - global update 2005. Particulate matter, ozone, nitrogen dioxide and sulfur dioxide (WHO Regional Office for Europe, 2006).",
+    "grounding": [
+      {
+        "page": 5,
+        "bbox": {
+          "l": 59.5276,
+          "t": 85.78959999999995,
+          "r": 359.54850000000016,
+          "b": 72.1481866177819
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "In various ways, these guidelines have stimulated authorities and civil society alike to increase efforts to control and study harmful air pollution exposures. In response to this growing awareness, the Sixty-eighth World Health Assembly adopted resolution WHA68.8, Health and the environment: addressing the health impact of air pollution, which was endorsed by 194 Member States in 2015 (WHO, 2015). This resolution stated the need to redouble efforts to protect populations from the health risks posed by air pollution. In addition, the United Nations (UN) Sustainable Development Goals (SDGs) were designed to address the public health threat posed by air pollution via specific targets to reduce air pollution exposure and the disease burden from household and ambient exposure.",
+    "grounding": [
+      {
+        "page": 6,
+        "bbox": {
+          "l": 59.5275,
+          "t": 611.8689,
+          "r": 394.04119199999934,
+          "b": 469.4068799266728
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "More than 15 years have passed since the publication of Global update 2005. In that time there has been a marked increase in evidence on the adverse health effects of air pollution, built on advances in air pollution measurement and exposure assessment and an expanded global database of air pollution measurements (discussed in Chapter 1). New epidemiological studies have documented the adverse health effects of exposure to high levels of air pollution in low- and middle-income countries, and studies in high-income countries with relatively clean air have reported adverse effects at much lower levels than had previously been studied.",
+    "grounding": [
+      {
+        "page": 6,
+        "bbox": {
+          "l": 59.5275,
+          "t": 451.0689,
+          "r": 394.03852209,
+          "b": 335.4068799266728
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "In view of the many scientific advances and the global role played by the WHO air quality guidelines, this update was begun in 2016.",
+    "grounding": [
+      {
+        "page": 6,
+        "bbox": {
+          "l": 59.5275,
+          "t": 317.0689,
+          "r": 393.9622439999996,
+          "b": 295.20677992667277
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "section_header",
+    "level": 3,
+    "text": "Objectives",
+    "grounding": [
+      {
+        "page": 6,
+        "bbox": {
+          "l": 59.5275,
+          "t": 268.65,
+          "r": 122.6787,
+          "b": 257.3671732355637
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "The overall objective of the updated global guidelines is to offer quantitative health-based recommendations for air quality management, expressed as longor short-term concentrations for a number of key air pollutants. Exceedance of the air quality guideline (AQG) levels is associated with important risks to public health. These guidelines are not legally binding standards; however, they do provide WHO Member States with an evidence-informed tool that they can use to inform legislation and policy. Ultimately, the goal of these guidelines is to provide guidance to help reduce levels of air pollutants in order to decrease the enormous health burden resulting from exposure to air pollution worldwide.",
+    "grounding": [
+      {
+        "page": 6,
+        "bbox": {
+          "l": 59.5275,
+          "t": 250.06889999999999,
+          "r": 394.08241562999945,
+          "b": 134.4068799266728
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "Specific objectives are the following.",
+    "grounding": [
+      {
+        "page": 6,
+        "bbox": {
+          "l": 59.5275,
+          "t": 116.06889999999999,
+          "r": 213.71999999999997,
+          "b": 107.60677992667274
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "list_item",
+    "level": 2,
+    "text": "\u25a0 Provide evidence-informed recommendations in the form of AQG levels, including an indication of the shape of the concentration-response function",
+    "grounding": [
+      {
+        "page": 6,
+        "bbox": {
+          "l": 59.5275,
+          "t": 89.269,
+          "r": 394.0135999999997,
+          "b": 67.40677992667281
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "in relation to critical health outcomes, for PM2.5, PM10, ozone, nitrogen dioxide, sulfur dioxide and carbon monoxide for relevant averaging times. These pollutants were chosen because of their worldwide importance. However, this choice does not imply that other air pollutants are irrelevant.",
+    "grounding": [
+      {
+        "page": 7,
+        "bbox": {
+          "l": 72.2835,
+          "t": 611.869,
+          "r": 394.0292989599997,
+          "b": 563.2068799266727
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "list_item",
+    "level": 2,
+    "text": "\u25a0 Provide interim targets to guide reduction efforts towards the ultimate and timely achievement of the AQG levels for countries that substantially exceed these levels.",
+    "grounding": [
+      {
+        "page": 7,
+        "bbox": {
+          "l": 59.5276,
+          "t": 558.269,
+          "r": 394.0426222399998,
+          "b": 523.0068799266728
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "list_item",
+    "level": 2,
+    "text": "\u25a0 Provide qualitative statements on good practices for the management of certain types of PM (i.e. black carbon or elemental carbon (BC/EC)3, ultrafine particles (UFP)4, and particles originating from sand and dust storms (SDS)) for which the available information is insufficient to derive AQG levels but indicates risk.",
+    "grounding": [
+      {
+        "page": 7,
+        "bbox": {
+          "l": 59.5276,
+          "t": 518.069,
+          "r": 394.0562699999994,
+          "b": 456.00687992667275
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "section_header",
+    "level": 3,
+    "text": "Methods used to develop the guidelines",
+    "grounding": [
+      {
+        "page": 7,
+        "bbox": {
+          "l": 59.5276,
+          "t": 429.45,
+          "r": 293.8756,
+          "b": 418.1671732355637
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "The guidelines were formulated by following a rigorous process involving several groups with defined roles and responsibilities (Chapter 2). In particular, the different steps in the development of the AQG levels included:",
+    "grounding": [
+      {
+        "page": 7,
+        "bbox": {
+          "l": 59.5276,
+          "t": 410.869,
+          "r": 394.07906405999984,
+          "b": 375.6068799266728
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "list_item",
+    "level": 2,
+    "text": "\u25a0 a determination of the scope of the guidelines and formulation of systematic review questions;",
+    "grounding": [
+      {
+        "page": 7,
+        "bbox": {
+          "l": 59.5276,
+          "t": 357.269,
+          "r": 394.0218,
+          "b": 335.4068799266728
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "list_item",
+    "level": 2,
+    "text": "\u25a0 a systematic review of the evidence and meta-analyses of quantitative effect estimates to inform updating of the AQG levels;",
+    "grounding": [
+      {
+        "page": 7,
+        "bbox": {
+          "l": 59.5276,
+          "t": 330.469,
+          "r": 394.0484067900002,
+          "b": 308.6068799266728
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "list_item",
+    "level": 2,
+    "text": "\u25a0 an assessment of the level of certainty of the bodies of evidence resulting from systematic reviews for the pollutants; and",
+    "grounding": [
+      {
+        "page": 7,
+        "bbox": {
+          "l": 59.5276,
+          "t": 303.669,
+          "r": 393.9889353799995,
+          "b": 281.80687992667276
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "list_item",
+    "level": 2,
+    "text": "\u25a0 the identification of AQG levels, that is, the lowest levels of exposure for which there is evidence of adverse health effects.",
+    "grounding": [
+      {
+        "page": 7,
+        "bbox": {
+          "l": 59.5276,
+          "t": 276.869,
+          "r": 393.98970716000014,
+          "b": 255.00687992667275
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "In addition, the 2005 air quality interim targets were updated to guide the implementation of the new AQG levels, and good practice statements were formulated to support the management of the specific types of PM of concern. Interim targets are air pollutant levels that are higher than the AQG levels, but which authorities in highly polluted areas can use to develop pollution reduction policies that are achievable within realistic time frames. Therefore, the interim targets should be regarded as steps towards the ultimate achievement of AQG levels in the future, rather than as end targets. The number and numerical values of the interim targets are pollutant specific, and are justified in the relevant sections of Chapter 3.",
+    "grounding": [
+      {
+        "page": 7,
+        "bbox": {
+          "l": 59.5276,
+          "t": 236.66899999999998,
+          "r": 394.07540379999983,
+          "b": 107.60687992667272
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "footnote",
+    "level": 1,
+    "text": "3 An indicator of airborne soot-like carbon.",
+    "grounding": [
+      {
+        "page": 7,
+        "bbox": {
+          "l": 59.5276,
+          "t": 79.21410000000003,
+          "r": 179.6803,
+          "b": 73.57268661778187
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "footnote",
+    "level": 1,
+    "text": "4 That is, particles with an aerodynamic diameter of of \u2264 0.1 \u03bcm.",
+    "grounding": [
+      {
+        "page": 7,
+        "bbox": {
+          "l": 59.5276,
+          "t": 71.21410000000003,
+          "r": 240.03840000000002,
+          "b": 65.57268661778187
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "The process and methods for developing these guidelines are described in detail in Chapter 2.",
+    "grounding": [
+      {
+        "page": 8,
+        "bbox": {
+          "l": 59.5275,
+          "t": 611.8689,
+          "r": 394.0126630400007,
+          "b": 590.0068799266728
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "The systematic reviews that informed the formulation of AQG levels and other related evidence discussed during the process are available in a special issue of Environment International, entitled Update of the WHO global air quality guidelines: systematic reviews (Whaley et al., 2021).",
+    "grounding": [
+      {
+        "page": 8,
+        "bbox": {
+          "l": 59.5275,
+          "t": 571.669,
+          "r": 394.0504963999994,
+          "b": 523.0068799266728
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "section_header",
+    "level": 3,
+    "text": "Recommendations on classical air pollutants",
+    "grounding": [
+      {
+        "page": 8,
+        "bbox": {
+          "l": 59.5275,
+          "t": 496.45,
+          "r": 321.2079000000001,
+          "b": 485.1671732355637
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "In this guideline update, recommendations on AQG levels are formulated, together with interim targets, for the following pollutants: PM2.5, PM10, ozone, nitrogen dioxide, sulfur dioxide and carbon monoxide (Table 0.1). The evidence-informed derivation of each AQG level and an indication of the reduction in health risk associated with the achievement of consecutive interim targets can be found in Chapter 3.",
+    "grounding": [
+      {
+        "page": 8,
+        "bbox": {
+          "l": 59.5275,
+          "t": 477.869,
+          "r": 394.06160766999943,
+          "b": 402.4068799266728
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "caption",
+    "level": 2,
+    "text": "Table 0.1. Recommended AQG levels and interim targets",
+    "grounding": [
+      {
+        "page": 8,
+        "bbox": {
+          "l": 59.5275,
+          "t": 371.39599999999996,
+          "r": 323.1842000000001,
+          "b": 361.99364436296975
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "table",
+    "level": 1,
+    "text": "| Pollutant       | Averaging time   |   Interim target | Interim target   | Interim target   | Interim target   | AQG level   |\n|-----------------|------------------|------------------|------------------|------------------|------------------|-------------|\n| Pollutant       | Averaging time   |                1 | 2                | 3                | 4                | AQG level   |\n| PM 2.5 , \u00b5g/m 3 | Annual           |               35 | 25               | 15               | 10               | 5           |\n| PM 2.5 , \u00b5g/m 3 | 24-hour a        |               75 | 50               | 37.5             | 25               | 15          |\n| PM 10 , \u00b5g/m 3  | Annual           |               70 | 50               | 30               | 20               | 15          |\n| PM 10 , \u00b5g/m 3  | 24-hour a        |              150 | 100              | 75               | 50               | 45          |\n| O 3 , \u00b5g/m 3    | Peak season b    |              100 | 70               | -                | -                | 60          |\n| O 3 , \u00b5g/m 3    | 8-hour a         |              160 | 120              | -                | -                | 100         |\n| NO 2 , \u00b5g/m 3   | Annual           |               40 | 30               | 20               | -                | 10          |\n| NO 2 , \u00b5g/m 3   | 24-hour a        |              120 | 50               | -                | -                | 25          |\n| SO 2 , \u00b5g/m 3   | 24-hour a        |              125 | 50               | -                | -                | 40          |\n| CO, mg/m 3      | 24-hour a        |                7 | -                | -                | -                | 4           |",
+    "grounding": [
+      {
+        "page": 8,
+        "bbox": {
+          "l": 58.76694936221286,
+          "t": 349.94378889579605,
+          "r": 394.4683086624481,
+          "b": 126.41812145440417
+        }
+      }
+    ],
+    "media": {
+      "table": {
+        "csv": "/content/output/pakistan_epa_smog_advisory/tables/pakistan_epa_smog_advisory_table_1_p8.csv",
+        "html": "/content/output/pakistan_epa_smog_advisory/tables/pakistan_epa_smog_advisory_table_1_p8.html",
+        "rows": 10,
+        "cols": 7,
+        "page": 8
+      }
+    }
+  },
+  {
+    "type": "footnote",
+    "level": 2,
+    "text": "\u1d43 99th percentile (i.e. 3-4 exceedance days per year).",
+    "grounding": [
+      {
+        "page": 8,
+        "bbox": {
+          "l": 59.5275,
+          "t": 120.10699999999997,
+          "r": 211.13670000000002,
+          "b": 114.46558661778181
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "footnote",
+    "level": 2,
+    "text": "\u1d47 Average of daily maximum 8-hour mean O3 concentration in the six consecutive months with the highest six-month running-average O3 concentration.",
+    "grounding": [
+      {
+        "page": 8,
+        "bbox": {
+          "l": 59.5275,
+          "t": 112.10699999999997,
+          "r": 389.54799999999994,
+          "b": 98.46558661778181
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "Only evidence assessed as having high or moderate certainty of an association between a pollutant and a specific health outcome was used to define the recommended AQG levels, and all recommendations are classified as strong according to the adapted Grading of Recommendations Assessment, Development and Evaluation (GRADE) approach (discussed in Chapter 2).",
+    "grounding": [
+      {
+        "page": 9,
+        "bbox": {
+          "l": 59.5276,
+          "t": 611.869,
+          "r": 394.04109400000084,
+          "b": 549.8068799266728
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "It is important to note that the air quality guidelines recommended in previous WHO air quality guidelines for pollutants and those averaging times not covered in this update remain valid. This includes the short averaging times for nitrogen dioxide, sulfur dioxide and carbon monoxide that were included in Global update 2005 and indoor air quality guidelines from 2010 (and not re-evaluated in this update). Table 0.2 shows existing air quality guidelines for nitrogen dioxide, sulfur dioxide and carbon monoxide with short averaging times. The reader is referred to previous volumes of air quality guidelines - Air quality guidelines for Europe (WHO Regional Office for Europe, 1987), Air quality guidelines for Europe, 2nd edition (WHO Regional Office for Europe, 2000); and WHO guidelines for indoor air quality: selected pollutants (WHO Regional Office for Europe, 2010) - for other pollutants that are not covered in this 2021 update.",
+    "grounding": [
+      {
+        "page": 9,
+        "bbox": {
+          "l": 59.5275,
+          "t": 531.469,
+          "r": 394.07138368000045,
+          "b": 375.6068799266728
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "caption",
+    "level": 2,
+    "text": "Table 0.2. Air quality guidelines for nitrogen dioxide, sulfur dioxide and carbon monoxide (short averaging times) that were not re-evaluated and remain valid",
+    "grounding": [
+      {
+        "page": 9,
+        "bbox": {
+          "l": 59.5276,
+          "t": 344.596,
+          "r": 392.3948999999999,
+          "b": 308.3936443629698
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "table",
+    "level": 1,
+    "text": "| Pollutant   | Averaging time   | Air quality guidelines that remain valid   |\n|-------------|------------------|--------------------------------------------|\n| 1-hour      | 200              | NO 2 , \u00b5g/m 3                              |\n| 10-minute   | 500              | SO 2 , \u00b5g/m 3                              |\n| 8-hour      | 10               | CO, mg/m 3                                 |\n| 1-hour      |                  | 35                                         |\n| 15-minute   |                  | 100                                        |",
+    "grounding": [
+      {
+        "page": 9,
+        "bbox": {
+          "l": 58.808796386895196,
+          "t": 297.9228038663486,
+          "r": 394.6870518749758,
+          "b": 177.80327208755654
+        }
+      }
+    ],
+    "media": {
+      "table": {
+        "csv": "/content/output/pakistan_epa_smog_advisory/tables/pakistan_epa_smog_advisory_table_2_p9.csv",
+        "html": "/content/output/pakistan_epa_smog_advisory/tables/pakistan_epa_smog_advisory_table_2_p9.html",
+        "rows": 5,
+        "cols": 3,
+        "page": 9
+      }
+    }
+  },
+  {
+    "type": "section_header",
+    "level": 3,
+    "text": "Good practice statements about other PM types",
+    "grounding": [
+      {
+        "page": 9,
+        "bbox": {
+          "l": 59.5276,
+          "t": 148.04999999999995,
+          "r": 340.9516,
+          "b": 136.76717323556363
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "As yet, insufficient data are available to provide recommendations for AQG levels and interim targets for specific types of PM, notably BC/EC, UFP and SDS. However, due to health concerns related to these pollutants, actions to enhance further research on their risks and approaches for mitigation are warranted.",
+    "grounding": [
+      {
+        "page": 9,
+        "bbox": {
+          "l": 59.5276,
+          "t": 129.46900000000005,
+          "r": 394.0532260000001,
+          "b": 80.80687992667276
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "Good practice statements for these pollutants are summarized in Table 0.3. The full text of and rationales for the statements can be found in Chapter 4.",
+    "grounding": [
+      {
+        "page": 10,
+        "bbox": {
+          "l": 59.5276,
+          "t": 611.869,
+          "r": 394.0229319999993,
+          "b": 590.0068799266728
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "section_header",
+    "level": 3,
+    "text": "The settings to which these guidelines apply",
+    "grounding": [
+      {
+        "page": 10,
+        "bbox": {
+          "l": 59.5276,
+          "t": 563.45,
+          "r": 321.5044,
+          "b": 552.1671732355637
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "The present guidelines are applicable to both outdoor and indoor environments globally. Thus, they cover all settings where people spend time.",
+    "grounding": [
+      {
+        "page": 10,
+        "bbox": {
+          "l": 59.5276,
+          "t": 544.869,
+          "r": 394.0188999999999,
+          "b": 523.0068799266728
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "However, as in previous editions, these guidelines do not cover occupational settings, owing to the specific characteristics of the relevant exposures and risk reduction policies and to potential differences in population susceptibility of the adult workforce in comparison with the general population.",
+    "grounding": [
+      {
+        "page": 10,
+        "bbox": {
+          "l": 59.5276,
+          "t": 504.669,
+          "r": 394.0170999999998,
+          "b": 456.00687992667275
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "section_header",
+    "level": 3,
+    "text": "What these guidelines do not address",
+    "grounding": [
+      {
+        "page": 10,
+        "bbox": {
+          "l": 59.5276,
+          "t": 429.45,
+          "r": 281.3320000000001,
+          "b": 418.1671732355637
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "These guidelines do not include recommendations about pollutant mixtures or the combined effects of pollutant exposures. In everyday life, people are exposed to a mixture of air pollutants that varies in space and time. WHO acknowledges the need to develop comprehensive models to quantify the effects of multiple exposures on human health. However, as the main body of evidence on air quality and health still focuses on the impact of single markers of ambient air pollution on the risk of adverse health outcomes, the current guidelines provide recommendations for each air pollutant individually. Achievement of the AQG levels for all these pollutants is necessary to minimize the health risk of the exposure.",
+    "grounding": [
+      {
+        "page": 10,
+        "bbox": {
+          "l": 59.5276,
+          "t": 410.869,
+          "r": 394.0886114299994,
+          "b": 295.20687992667274
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "Furthermore, these guidelines do not address specific recommendations on policies and interventions because these are largely context specific: what might be effective in one setting might not work in another. Lastly, individuallevel interventions, such as the use of personal respiratory protection (e.g. masks, respirators, air purifiers) or behavioural measures, are addressed in another document, Personal interventions and risk communication on air pollution (WHO, 2020).",
+    "grounding": [
+      {
+        "page": 10,
+        "bbox": {
+          "l": 59.5276,
+          "t": 276.869,
+          "r": 394.06666450999995,
+          "b": 188.00687992667275
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "section_header",
+    "level": 3,
+    "text": "Target audience",
+    "grounding": [
+      {
+        "page": 10,
+        "bbox": {
+          "l": 59.5276,
+          "t": 161.45000000000005,
+          "r": 154.6024,
+          "b": 150.16717323556372
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "The WHO global air quality guidelines aim to protect populations from the adverse effects of air pollution. They are designed to serve as a global reference for assessing whether, and how much, exposure of a population (including particularly vulnerable and/or susceptible subgroups) to various levels of the considered air pollutants results in health concerns.",
+    "grounding": [
+      {
+        "page": 10,
+        "bbox": {
+          "l": 59.5276,
+          "t": 142.86900000000003,
+          "r": 394.07257005999924,
+          "b": 80.80687992667276
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "caption",
+    "level": 2,
+    "text": "Table 0.3. Summary of good practice statements",
+    "grounding": [
+      {
+        "page": 11,
+        "bbox": {
+          "l": 59.5276,
+          "t": 612.596,
+          "r": 290.3050000000001,
+          "b": 603.1936443629697
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "table",
+    "level": 1,
+    "text": "|       |   Good practice statements | Good practice statements                                                                                                                                                                                                                                                                                                                                                     |\n|-------|----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|\n| BC/EC |                         1. | Make systematic measurements of black carbon and/or elemental carbon. Such measurements should not replace or reduce existing monitoring of those pollutants for which guidelines currently exist.                                                                                                                                                                           |\n|       |                         2. | Undertake the production of emission inventories, exposure assessments and source apportionment for BC/EC.                                                                                                                                                                                                                                                                   |\n|       |                         3. | Take measures to reduce BC/EC emissions from within the relevant jurisdiction and, where appropriate, develop standards (or targets) for ambient BC/EC concentrations.                                                                                                                                                                                                       |\n| UFP   |                         1. | Quantify ambient UFP in terms of PNC for a size range with a lower limit of \u2264 10 nm and no restriction on the upper limit.                                                                                                                                                                                                                                                   |\n|       |                         2. | Expand the common air quality monitoring strategy by integrating UFP monitoring into the existing air quality monitoring. Include size-segregated real-time PNC measurements at selected air monitoring stations in addition to and simultaneously with other airborne pollutants and characteristics of PM.                                                                 |\n|       |                         3. | Distinguish between low and high PNC to guide decisions on the priorities of UFP source emission control. Low PNC can be considered < 1 000 particles/ cm3 (24-hour mean). High PNC can be considered > 10 000 particles/cm3 (24-hour mean) or 20 000 particles/cm3 (1-hour mean).                                                                                           |\n|       |                         4. | Utilize emerging science and technology to advance approaches to the assessment of exposure to UFP for their application in epidemiological studies and UFP management.                                                                                                                                                                                                      |\n| SDS   |                         1. | Maintain suitable air quality management and dust forecasting programmes. These should include early warning systems and short-term air pollution action plans to alert the population to stay indoors and take personal measures to minimize exposure and subsequent short-term health effects during SDS incidents with high levels of PM.                                 |\n|       |                         2. | Maintain suitable air quality monitoring programmes and reporting procedures, including source apportionment activities to quantify and characterize PM composition and the percentage contribution of SDS to the overall ambient concentration of PM. This will enable local authorities to target local PM emissions from anthropogenic and natural sources for reduction. |\n|       |                         3. | Conduct epidemiological studies, including those addressing the long-term effects of SDS, and research activities aimed at better understanding the toxicity of the different types of PM. Such studies are especially recommended for areas where there is a lack of sufficient knowledge and information about the health risk due to frequent exposure to SDS.            |\n|       |                         4. | Implement wind erosion control through the carefully planned expansion of green spaces that considers and is adjusted to the contextual ecosystem conditions. This calls for regional collaboration among countries in the regions affected by SDS to combat desertification and carefully manage green areas.                                                               |\n|       |                         5. | Clean the streets in those urban areas characterized by a relatively high population density and low rainfall to prevent resuspension by road traffic as a short-term measure after intense SDS episodes with high dust deposition rates.                                                                                                                                    |",
+    "grounding": [
+      {
+        "page": 11,
+        "bbox": {
+          "l": 58.22798742734598,
+          "t": 595.6308810060141,
+          "r": 395.4931549108564,
+          "b": 84.33799380892003
+        }
+      }
+    ],
+    "media": {
+      "table": {
+        "csv": "/content/output/pakistan_epa_smog_advisory/tables/pakistan_epa_smog_advisory_table_3_p11.csv",
+        "html": "/content/output/pakistan_epa_smog_advisory/tables/pakistan_epa_smog_advisory_table_3_p11.html",
+        "rows": 12,
+        "cols": 3,
+        "page": 11
+      }
+    }
+  },
+  {
+    "type": "footnote",
+    "level": 2,
+    "text": "PNC: particle number concentration.",
+    "grounding": [
+      {
+        "page": 11,
+        "bbox": {
+          "l": 59.5276,
+          "t": 58.17070000000001,
+          "r": 162.87999999999997,
+          "b": 52.52928661778185
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "The guidelines are a critical tool for the following three main groups of users:",
+    "grounding": [
+      {
+        "page": 12,
+        "bbox": {
+          "l": 59.5276,
+          "t": 611.869,
+          "r": 380.07880000000006,
+          "b": 603.4068799266728
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "list_item",
+    "level": 2,
+    "text": "\u25a0 policy-makers, lawmakers and technical experts operating at the local, national and international levels who are responsible for developing and implementing regulations and standards for air quality, air pollution control, urban planning and other policy areas;",
+    "grounding": [
+      {
+        "page": 12,
+        "bbox": {
+          "l": 59.5276,
+          "t": 585.069,
+          "r": 394.0171841600001,
+          "b": 536.4068799266728
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "list_item",
+    "level": 2,
+    "text": "\u25a0 national and local authorities and nongovernmental organizations, civil society organizations and advocacy groups, such as patients, citizen groups, industrial stakeholders and environmental organizations; and",
+    "grounding": [
+      {
+        "page": 12,
+        "bbox": {
+          "l": 59.5276,
+          "t": 531.469,
+          "r": 393.9703120500006,
+          "b": 496.20687992667274
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "list_item",
+    "level": 2,
+    "text": "\u25a0 academics, health and environmental impact assessment practitioners, and researchers in the broad field of air pollution.",
+    "grounding": [
+      {
+        "page": 12,
+        "bbox": {
+          "l": 59.5276,
+          "t": 491.269,
+          "r": 394.01459999999986,
+          "b": 469.4068799266728
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "These groups are the targets of the information, education and communication strategies outlined in Chapter 5. The strategies, and the tools to implement them, will be essential to ensure that these global guidelines are widely disseminated and considered in policy and planning decisions. In addition, these groups are addressed in Chapter 6, on implementation of the guidelines. This includes the aspects involved in developing air quality standards based on the recommendations and general risk management principles, which are built on decades of experience.",
+    "grounding": [
+      {
+        "page": 12,
+        "bbox": {
+          "l": 59.5276,
+          "t": 451.069,
+          "r": 394.0559800000005,
+          "b": 348.80687992667276
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "section_header",
+    "level": 3,
+    "text": "Implementation of the guidelines",
+    "grounding": [
+      {
+        "page": 12,
+        "bbox": {
+          "l": 59.5276,
+          "t": 322.25,
+          "r": 252.65079999999998,
+          "b": 310.96717323556373
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "While achievement of the AQG levels should be the ultimate goal of actions to implement the guidelines, this might be a difficult task for many countries and regions struggling with high air pollution levels. Therefore, gradual progress in improving air quality, marked by the achievement of interim targets, should be considered a critical indicator of improving health conditions for populations. Key institutional and technical tools supported by human capacity-building are necessary to achieve this goal. Implementation of the guidelines requires the existence and operation of air pollution monitoring systems; public access to air quality data; legally binding, globally harmonized air quality standards; and air quality management systems. Policy decisions to set priorities for action will profit from the health risk assessment of air pollution.",
+    "grounding": [
+      {
+        "page": 12,
+        "bbox": {
+          "l": 59.5276,
+          "t": 303.669,
+          "r": 394.0698863999993,
+          "b": 161.20687992667274
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "While actions to reduce air pollution require cooperation among various sectors and stakeholders, health sector involvement is crucial for raising awareness of the impacts of air pollution on health and, thus, the economy, and for ensuring that protecting health strongly figures in policy discussions.",
+    "grounding": [
+      {
+        "page": 12,
+        "bbox": {
+          "l": 59.5276,
+          "t": 142.86900000000003,
+          "r": 394.0216,
+          "b": 94.20687992667274
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "Monitoring and evaluation are equally crucial to ensure that guidelines are implemented; they are addressed in Chapter 7.",
+    "grounding": [
+      {
+        "page": 13,
+        "bbox": {
+          "l": 59.5276,
+          "t": 611.869,
+          "r": 393.9045099999996,
+          "b": 590.0068799266728
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "Currently, the accumulated evidence is sufficient to justify actions to reduce population exposure to key air pollutants, not only in particular countries or regions but on a global scale. Nevertheless, uncertainties and knowledge gaps remain. Future research (discussed in Chapter 8) will further strengthen the scientific evidence base for making decisions on clean air policy worldwide.",
+    "grounding": [
+      {
+        "page": 13,
+        "bbox": {
+          "l": 59.5276,
+          "t": 571.669,
+          "r": 394.0107337999993,
+          "b": 509.6068799266728
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "section_header",
+    "level": 2,
+    "text": "References",
+    "grounding": [
+      {
+        "page": 14,
+        "bbox": {
+          "l": 59.5276,
+          "t": 611.739,
+          "r": 165.1486,
+          "b": 593.8745242896425
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "Whaley P, Nieuwenhuijsen M, Burns J, editors (2021). Update of the WHO global air quality guidelines: systematic reviews. Environ Int. 142(Special issue) (https://www.sciencedirect. com/journal/environment-international/special-issue/10MTC4W8FXJ, accessed 17 June 2021).",
+    "grounding": [
+      {
+        "page": 14,
+        "bbox": {
+          "l": 59.5276,
+          "t": 570.942,
+          "r": 394.02209999999957,
+          "b": 536.6201154903758
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "WHO (2015). Resolution WHA68.8. Health and the environment: addressing the health impact of air pollution. In: Sixty-eighth World Health Assembly, Geneva, 18-26 May 2015. Geneva: World Health Organization (https://apps.who.int/iris/handle/10665/253237, accessed 19 November 2020).",
+    "grounding": [
+      {
+        "page": 14,
+        "bbox": {
+          "l": 59.5276,
+          "t": 517.342,
+          "r": 394.02302399999996,
+          "b": 469.62011549037584
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "WHO (2020). Personal interventions and risk communication on air pollution. Geneva: World Health Organization (https://apps.who.int/iris/handle/10665/333781, accessed 21 June 2021).",
+    "grounding": [
+      {
+        "page": 14,
+        "bbox": {
+          "l": 59.5276,
+          "t": 450.342,
+          "r": 394.02257199999997,
+          "b": 416.0201154903758
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "WHO Regional Office for Europe (1987). Air quality guidelines for Europe. Copenhagen: WHO Regional Office for Europe (https://apps.who.int/iris/handle/10665/107364, accessed 25 June 2021).",
+    "grounding": [
+      {
+        "page": 14,
+        "bbox": {
+          "l": 59.5276,
+          "t": 396.74199999999996,
+          "r": 394.0181594000003,
+          "b": 362.4201154903758
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "WHO Regional Office for Europe (2000). Air quality guidelines for Europe, second edition. Copenhagen: WHO Regional Office for Europe (https://apps.who.int/iris/ handle/10665/107335, accessed 24 June 2021).",
+    "grounding": [
+      {
+        "page": 14,
+        "bbox": {
+          "l": 59.5276,
+          "t": 343.142,
+          "r": 394.02519200000063,
+          "b": 308.8201154903758
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "WHO Regional Office for Europe (2006). Air quality guidelines - global update 2005. Particulate matter, ozone, nitrogen dioxide and sulfur dioxide. Copenhagen: WHO Regional Office for Europe (https://apps.who.int/iris/handle/10665/107823, accessed 28 June 2021).",
+    "grounding": [
+      {
+        "page": 14,
+        "bbox": {
+          "l": 59.5276,
+          "t": 289.542,
+          "r": 394.04472000000095,
+          "b": 255.2201154903758
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "WHO Regional Office for Europe (2010). WHO guidelines for indoor air quality: selected pollutants. Copenhagen: WHO Regional Office for Europe (https://apps.who.int/iris/ handle/10665/260127, accessed 24 June 2021).",
+    "grounding": [
+      {
+        "page": 14,
+        "bbox": {
+          "l": 59.5276,
+          "t": 235.942,
+          "r": 394.0811153499996,
+          "b": 201.62011549037584
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "The main objective of these updated global guidelines is to offer healthbased air quality guideline levels, expressed as long- or short-term concentrations, for six key air pollutants: PM 2.5 , PM 10 , ozone, nitrogen dioxide, sulfur dioxide and carbon monoxide. In addition, the guidelines provide interim targets to guide reduction efforts for these pollutants, as well as good practice statements for the management of certain types of PM (i.e. black carbon/elemental carbon, ultrafine particles, and particles originating from sand and dust storms). These guidelines are not legally binding standards; however, they provide WHO Member States with an evidence-informed tool they can use to inform legislation and policy. Ultimately, the goal of these guidelines is to help reduce levels of air pollutants in order to decrease the enormous health burden resulting from exposure to air pollution worldwide.",
+    "grounding": [
+      {
+        "page": 16,
+        "bbox": {
+          "l": 59.5276,
+          "t": 615.1183,
+          "r": 345.83225000000016,
+          "b": 463.1262977085243
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "Compared with previous WHO guidelines, these guidelines:",
+    "grounding": [
+      {
+        "page": 16,
+        "bbox": {
+          "l": 59.5276,
+          "t": 453.449,
+          "r": 294.52369999999996,
+          "b": 445.4569977085243
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "list_item",
+    "level": 2,
+    "text": "\u25a0 use new methods for evidence synthesis and guideline development;",
+    "grounding": [
+      {
+        "page": 16,
+        "bbox": {
+          "l": 59.5276,
+          "t": 437.669,
+          "r": 302.95079999999984,
+          "b": 415.80687992667276
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "list_item",
+    "level": 2,
+    "text": "\u25a0 reinforce previous evidence on the adverse health effects of air pollution; and",
+    "grounding": [
+      {
+        "page": 16,
+        "bbox": {
+          "l": 59.5276,
+          "t": 410.869,
+          "r": 325.39770000000004,
+          "b": 389.00687992667275
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "list_item",
+    "level": 2,
+    "text": "\u25a0 provide evidence of adverse health effects from air pollution at lower levels than previously known.",
+    "grounding": [
+      {
+        "page": 16,
+        "bbox": {
+          "l": 59.5276,
+          "t": 384.069,
+          "r": 325.3238999999999,
+          "b": 362.20687992667274
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "The guidelines are a critical tool for the following three main groups of users:",
+    "grounding": [
+      {
+        "page": 16,
+        "bbox": {
+          "l": 59.5276,
+          "t": 346.9669,
+          "r": 325.75524999999993,
+          "b": 326.9748977085243
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "list_item",
+    "level": 2,
+    "text": "\u25a0 policy-makers, lawmakers and technical experts at the local, national and international levels who are responsible for developing and implementing regulations and standards for air quality, air pollution control, urban planning and other policy areas;",
+    "grounding": [
+      {
+        "page": 16,
+        "bbox": {
+          "l": 59.5276,
+          "t": 317.069,
+          "r": 326.6181,
+          "b": 255.00687992667275
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "list_item",
+    "level": 2,
+    "text": "\u25a0 national and local authorities and nongovernmental organizations, civil society organizations and advocacy groups such as patients, citizen groups, industrial stakeholders and environmental organizations; and",
+    "grounding": [
+      {
+        "page": 16,
+        "bbox": {
+          "l": 59.5276,
+          "t": 250.06900000000002,
+          "r": 337.1184,
+          "b": 201.4068799266728
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "list_item",
+    "level": 2,
+    "text": "\u25a0 academics, health and environmental impact assessment practitioners, and researchers in the broad field of air pollution.",
+    "grounding": [
+      {
+        "page": 16,
+        "bbox": {
+          "l": 59.5276,
+          "t": 196.1055,
+          "r": 321.92934999999994,
+          "b": 174.7134977085243
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "section_header",
+    "level": 3,
+    "text": "WHO European Centre for Environment and Health",
+    "grounding": [
+      {
+        "page": 16,
+        "bbox": {
+          "l": 11.3386,
+          "t": 94.85810000000004,
+          "r": 208.27139999999991,
+          "b": 87.33621549037582
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "Platz der Vereinten Nationen 1 D-53113 Bonn, Germany",
+    "grounding": [
+      {
+        "page": 16,
+        "bbox": {
+          "l": 11.3386,
+          "t": 82.85810000000004,
+          "r": 125.45060000000004,
+          "b": 65.33621549037582
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "picture",
+    "level": 1,
+    "text": "9789240034433\n789240 034433",
+    "grounding": [
+      {
+        "page": 16,
+        "bbox": {
+          "l": 332.2705130134616,
+          "t": 75.93184602936287,
+          "r": 435.42368418286026,
+          "b": 18.528036264651973
+        }
+      }
+    ],
+    "media": {
+      "image": {
+        "path": "/content/output/pakistan_epa_smog_advisory/images/pakistan_epa_smog_advisory_image_3_p16.png",
+        "type": "image",
+        "page": 16,
+        "ocr_text": "9789240034433\n789240 034433"
+      }
+    }
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "12 Tel.: +49 228 815 0400 Fax: +49 228 815 0440 E-mail: euroeceh@who.int / aqh_who@who.int Website: www.euro.who.int WHO GLOBAL AIR QUALITY GUIDELINES",
+    "grounding": [
+      {
+        "page": 16,
+        "bbox": {
+          "l": 11.3386,
+          "t": 49.858100000000036,
+          "r": 187.80330000000004,
+          "b": 8.336215490375821
+        }
+      },
+      {
+        "page": 16,
+        "bbox": {
+          "l": 275.2687,
+          "t": 23.963300000000004,
+          "r": 393.9588999999993,
+          "b": 18.321886617781843
+        }
+      }
+    ],
+    "media": {}
+  }
+]

@@ -30,8 +30,7 @@ catboost_info/
 
 # RAG corpus (large files)
 corpus/chroma_db/
-corpus/extracted/
-corpus/*.pdf
+corpus/pdfs/*.pdf
 
 # Logs & Prefect
 *.log

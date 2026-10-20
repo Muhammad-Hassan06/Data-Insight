@@ -1,0 +1,636 @@
+[
+  {
+    "type": "section_header",
+    "level": 1,
+    "text": "AIR POLLUTION",
+    "grounding": [
+      {
+        "page": 1,
+        "bbox": {
+          "l": 257.5199,
+          "t": 716.712,
+          "r": 354.44390000000004,
+          "b": 706.9316363636364
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "Pollution control/abatement is one of the core areas of the Pakistan National Conservation Strategy (NCS) approved by the Government. An emerging issue of pollution is the degradation of ambient air quality particularly in urban areas. Various surveys show that air pollution levels in cities have either crossed safe limits or have just reached the threshold values. The most serious issue of air quality in Pakistan is the presence of excessive Suspended Particulate Matters (SPM) present in the air. The major sources of SPM are vehicles, industry, burning of solid waste, brick kilns and natural dust.",
+    "grounding": [
+      {
+        "page": 1,
+        "bbox": {
+          "l": 90.0,
+          "t": 689.2320000000001,
+          "r": 522.1211999999991,
+          "b": 582.8516363636368
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "Pakistan EPA with the assistance of Japan International Cooperation Agency (JICA) carried out various studies to access ambient air quality in major cities of Pakistan. In study of three cities namely Lahore; Rawalpindi; and Islamabad, the average suspended particulate matters in our cities were 6.4 times higher than WHO Guidelines and 3.8 times higher than Japanese standards. The levels of Sulphur dioxide, Oxides of Nitrogen and Carbon Monoxide were found in excess of acceptable standards in some areas but the average levels were found below WHO guidelines. Presence of such a high levels of Suspended Particulate Matters in the air is certainly a matter of concern due to its serious health implications for public.",
+    "grounding": [
+      {
+        "page": 1,
+        "bbox": {
+          "l": 90.0,
+          "t": 565.0320000000005,
+          "r": 522.2159999999998,
+          "b": 444.8517363636364
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "The Government realizing the issue of degradation of air quality has taken various steps for its improvement. Some significant measures taken in the recent years are:",
+    "grounding": [
+      {
+        "page": 1,
+        "bbox": {
+          "l": 89.99999999999997,
+          "t": 440.8321,
+          "r": 522.1247999999998,
+          "b": 417.2517363636364
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "list_item",
+    "level": 2,
+    "text": "Establishment of motor vehicle emission standards and strengthening of Motor Vehicle Examination system in the country.",
+    "grounding": [
+      {
+        "page": 1,
+        "bbox": {
+          "l": 180.0,
+          "t": 402.7701,
+          "r": 485.9837459999993,
+          "b": 379.6466423636363
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "list_item",
+    "level": 2,
+    "text": "Constitution of Environmental Squads of traffic police at federal and provincial levels.",
+    "grounding": [
+      {
+        "page": 1,
+        "bbox": {
+          "l": 180.0,
+          "t": 367.60992,
+          "r": 486.0869519999981,
+          "b": 344.4263423636363
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "list_item",
+    "level": 2,
+    "text": "Started setting up of 15 tune up stations for gasoline and diesel vehicles and establishing a revolving loan of US $ 3 million to encourage installation of additional tune up stations in the private sector.",
+    "grounding": [
+      {
+        "page": 1,
+        "bbox": {
+          "l": 180.0,
+          "t": 332.38962,
+          "r": 486.02482800000064,
+          "b": 297.6860483636363
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "list_item",
+    "level": 2,
+    "text": "Due to incentive regime offered by the Government, about 1.2 million petrol vehicles have so far been converted to CNG and a number of new CNG stations have set up in the country. Efforts are also being made to convert diesel vehicles to CNG",
+    "grounding": [
+      {
+        "page": 1,
+        "bbox": {
+          "l": 180.0,
+          "t": 285.649326,
+          "r": 486.11600999999973,
+          "b": 239.48588036363628
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "list_item",
+    "level": 2,
+    "text": "Introduction of lead free gasoline and phasing out sulphur from diesel for providing clean fuels.",
+    "grounding": [
+      {
+        "page": 1,
+        "bbox": {
+          "l": 180.00000000000003,
+          "t": 227.4491579999999,
+          "r": 485.9887559999996,
+          "b": 204.26558036363633
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "list_item",
+    "level": 2,
+    "text": "Promotion of LPG and Bio fuel in the country.",
+    "grounding": [
+      {
+        "page": 1,
+        "bbox": {
+          "l": 180.00000000000003,
+          "t": 192.22885799999995,
+          "r": 384.48415199999994,
+          "b": 179.964378
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "list_item",
+    "level": 2,
+    "text": "Mass transit for major cities",
+    "grounding": [
+      {
+        "page": 1,
+        "bbox": {
+          "l": 180.00000000000003,
+          "t": 168.528552,
+          "r": 311.90728800000005,
+          "b": 156.26407199999994
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "list_item",
+    "level": 2,
+    "text": "Implementing of industrial emission standards.",
+    "grounding": [
+      {
+        "page": 1,
+        "bbox": {
+          "l": 180.00000000000003,
+          "t": 144.76812599999994,
+          "r": 386.63244000000003,
+          "b": 132.503646
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "list_item",
+    "level": 2,
+    "text": "Green fund by Government of Punjab",
+    "grounding": [
+      {
+        "page": 1,
+        "bbox": {
+          "l": 180.00000000000003,
+          "t": 121.06781999999998,
+          "r": 348.81395400000025,
+          "b": 108.80334000000005
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "Pak-EPA has also launched the Environmental Monitoring System project with collaboration of Government of Japan. Capital cost of project is Rs. 1,089.10 million and main objectives of project are following:",
+    "grounding": [
+      {
+        "page": 2,
+        "bbox": {
+          "l": 125.99990000000003,
+          "t": 689.2320000000001,
+          "r": 522.0755,
+          "b": 651.8516363636365
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "list_item",
+    "level": 2,
+    "text": "Provision of continuous air monitoring stations and mobile laboratories in five cities (Karachi, Lahore, Peshawar, Quetta and Islamabad)",
+    "grounding": [
+      {
+        "page": 2,
+        "bbox": {
+          "l": 160.37990000000002,
+          "t": 634.0320000000003,
+          "r": 522.0215000000002,
+          "b": 596.6516363636367
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "list_item",
+    "level": 2,
+    "text": "ii) Provision of continuous water monitoring stations and mobile laboratories in six cities (Karachi, Lahore, Peshawar, Quetta, Rawalpindi and Islamabad).",
+    "grounding": [
+      {
+        "page": 2,
+        "bbox": {
+          "l": 160.37989999999996,
+          "t": 578.8320000000004,
+          "r": 522.0095,
+          "b": 541.4516363636369
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "list_item",
+    "level": 2,
+    "text": "iii) Up-gradation of analytical laboratories in five EPAs",
+    "grounding": [
+      {
+        "page": 2,
+        "bbox": {
+          "l": 160.37989999999996,
+          "t": 523.6320000000006,
+          "r": 447.66229999999945,
+          "b": 513.851636363637
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "list_item",
+    "level": 2,
+    "text": "iv) Establishment of air and water surveillance",
+    "grounding": [
+      {
+        "page": 2,
+        "bbox": {
+          "l": 160.37989999999996,
+          "t": 496.03200000000066,
+          "r": 404.8222999999999,
+          "b": 486.25163636363703
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "The first phase of the project will be complete at April, 2007.",
+    "grounding": [
+      {
+        "page": 2,
+        "bbox": {
+          "l": 89.9999,
+          "t": 461.53200000000066,
+          "r": 384.15350000000007,
+          "b": 451.75163636363703
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "Over the years there is phenomenal increase in the number of vehicles which has jumped from 0.8 million to about 4.0 million within 20 years showing an overall increase of 388%. The average compound growth of vehicles is about 12 percent per annum. Since 1980, the maximum growth has been seen in 2-stroke vehicles i.e delivery vans which is 1751%, followed by Motor cycles 541% and Rickshaws 159%. According to a World Bank study carried out in Bangladesh and India, the major cause of suspended particulate matters was due to 2- stroke vehicles using straight mineral oil (instead of 2T oil) as lubricant and use of excessive quantity of lubricant (12%) instead of 2% for motor cycles and 3% for three wheelers. The provincial governments have introduced various programs to replace two stroke rickshaws with four stroke CNG rickshaws.",
+    "grounding": [
+      {
+        "page": 2,
+        "bbox": {
+          "l": 89.99990000000003,
+          "t": 427.03200000000066,
+          "r": 522.0838999999997,
+          "b": 293.11163636363693
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "Awareness programs have also been initiated to sensitize the commuters. This includes launching of the Vehicular Emission Testing Station (VETS). The VETS is equipped with state of the art of vehicular monitoring equipment and has been procured under Pakistan Environment Program funded by Royal Netherlands Embassy. The purpose of this is to check smoke emitting vehicles plying on the roads in Islamabad. Vehicle Emission Testing Team in collaboration of Islamabad Traffic Police (ITP) have so far carried out test of 14431 (Thirteen thousand Seven hundred Twenty) vehicles, out of which 12531 (86 %) vehicles have been cleared and have accordingly been issued green stickers, 1900 (13 %) vehicles causing pollution have been issued red (warning) stickers.",
+    "grounding": [
+      {
+        "page": 2,
+        "bbox": {
+          "l": 89.99990000000003,
+          "t": 289.09200000000055,
+          "r": 522.1342999999986,
+          "b": 168.91163636363683
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "table",
+    "level": 1,
+    "text": "|   Green/ Compliance |   Red/Non Compliance |   Total Checked Vehicles |\n|---------------------|----------------------|--------------------------|\n|               12531 |                 1900 |                    14431 |",
+    "grounding": [
+      {
+        "page": 2,
+        "bbox": {
+          "l": 139.01161193847656,
+          "t": 139.067138671875,
+          "r": 472.564208984375,
+          "b": 95.47381591796875
+        }
+      }
+    ],
+    "media": {
+      "table": {
+        "csv": "/content/output/who_air_quality_guidelines/tables/who_air_quality_guidelines_table_1_p2.csv",
+        "html": "/content/output/who_air_quality_guidelines/tables/who_air_quality_guidelines_table_1_p2.html",
+        "rows": 2,
+        "cols": 3,
+        "page": 2
+      }
+    }
+  },
+  {
+    "type": "picture",
+    "level": 1,
+    "text": "16000\n14431\n14000\n12531\n12000\n10000\nTotal\nGreen\nRed",
+    "grounding": [
+      {
+        "page": 3,
+        "bbox": {
+          "l": 140.69558715820312,
+          "t": 708.9164657592773,
+          "r": 460.2978820800781,
+          "b": 526.1408081054688
+        }
+      }
+    ],
+    "media": {
+      "image": {
+        "path": "/content/output/who_air_quality_guidelines/images/who_air_quality_guidelines_image_1_p3.png",
+        "type": "image",
+        "page": 3,
+        "ocr_text": "16000\n14431\n14000\n12531\n12000\n10000\nTotal\nGreen\nRed"
+      }
+    }
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "Diesel trucks and buses have also increased at an alarming rate of 200-300% since 1980. Diesel vehicles due to overloading, faulty injection nozzles and weak engine emit excessive graphitic carbon (visible smoke). This situation is very common in our country. Diesel Particulate Filter (DPF), which is a device used in many countries to control emission in diesel vehicles, cannot be used in Pakistan as it requires low sulphur diesel i.e 0.05-0.5% sulphur (available diesel in market contains 1% sulphur).",
+    "grounding": [
+      {
+        "page": 3,
+        "bbox": {
+          "l": 89.99999999999989,
+          "t": 496.03200000000066,
+          "r": 522.1607999999992,
+          "b": 417.251636363637
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "In Pakistan cement factories, fertilizer plants, stone crushers and countless number of brick kilns have the potential to emit suspended particulate matters in the air. Some of these units and almost all brick kilns are adding to excessive pollution due to their old age and lack of resources to procure anti pollution technology.",
+    "grounding": [
+      {
+        "page": 3,
+        "bbox": {
+          "l": 89.99999999999986,
+          "t": 399.4320000000006,
+          "r": 522.1667999999997,
+          "b": 348.3116363636369
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "According to Strategic Country Environmental Assessment (SCEA) Report, the environmental degradation is estimated to be 6 % GDP of Pakistan economy. The cost to economy in terms of air pollution was estimated that Rs. 65 billion per year at urban air pollution, Rs. 112 billion per year at water supply, sanitation and hygiene, Rs. 70 b/y at Agriculture (soil erosion), Rs. 67 b/y at Indoor pollution and Rs. 2.7 b/y at deforestation.",
+    "grounding": [
+      {
+        "page": 3,
+        "bbox": {
+          "l": 89.99999999999974,
+          "t": 330.49200000000053,
+          "r": 522.0431999999996,
+          "b": 265.51163636363685
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "picture",
+    "level": 1,
+    "text": "\u25a0 Water supply, sanitation\nand hygiene\n\u25a1 Indoor air pollution\n\u25a0 Urban air pollution\n\u25a0 Agriculture (soil salinity\nand erosion)\n\u25a0 Lead exposure\nRangeland degradation\n\u25a1 Deforestation",
+    "grounding": [
+      {
+        "page": 3,
+        "bbox": {
+          "l": 167.28341674804688,
+          "t": 255.49969482421875,
+          "r": 460.2918395996094,
+          "b": 84.51190185546875
+        }
+      }
+    ],
+    "media": {
+      "image": {
+        "path": "/content/output/who_air_quality_guidelines/images/who_air_quality_guidelines_image_2_p3.png",
+        "type": "image",
+        "page": 3,
+        "ocr_text": "\u25a0 Water supply, sanitation\nand hygiene\n\u25a1 Indoor air pollution\n\u25a0 Urban air pollution\n\u25a0 Agriculture (soil salinity\nand erosion)\n\u25a0 Lead exposure\nRangeland degradation\n\u25a1 Deforestation"
+      }
+    }
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "Pakistan Environmental Protection Council in February, 2001 under the chairmanship of the Chief Executive of Pakistan approved a National Environment Action Plan (NEAP) that, inter-alia, addressed the issue of air pollution. The NEAP is likely to set a mile stone in providing clean air to the people of Pakistan. Institutional arrangement and planning of NEAP has already been initiated and its implementation will be started soon.",
+    "grounding": [
+      {
+        "page": 4,
+        "bbox": {
+          "l": 89.99990000000003,
+          "t": 716.832,
+          "r": 522.1775,
+          "b": 638.0516363636366
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "text",
+    "level": 1,
+    "text": "While government has taken right steps in improving air quality then cooperation and support of people in implementing government policies and plans is a must. All segments of society should come forward and discharge their social and moral responsibilities. At this stage we need to involve ourselves in the environmental movement. Individually and collectively we can take the following measures to improve air quality in our country.",
+    "grounding": [
+      {
+        "page": 4,
+        "bbox": {
+          "l": 89.99989999999994,
+          "t": 620.2320000000003,
+          "r": 486.1078999999999,
+          "b": 541.4516363636369
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "list_item",
+    "level": 2,
+    "text": "Keep our vehicle tuned up as far as possible and when required, get our vehicle repaired in time. A tuned up vehicle consumes less fuel while delayed maintenance means more costs.",
+    "grounding": [
+      {
+        "page": 4,
+        "bbox": {
+          "l": 180.0,
+          "t": 526.9701,
+          "r": 486.06490800000074,
+          "b": 492.3266483636363
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "list_item",
+    "level": 2,
+    "text": "Rickshaw drivers should avoid mixing of excessive lubricating oil in Petrol. They should choose good quality lubricating oil (preferably 2T oil) for increasing life of the engine and low emission.",
+    "grounding": [
+      {
+        "page": 4,
+        "bbox": {
+          "l": 180.0,
+          "t": 480.289926,
+          "r": 485.9857499999985,
+          "b": 445.5863543636363
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "list_item",
+    "level": 2,
+    "text": "Convert vehicle to compressed natural gas (CNG). Not only the operating cost of CNG is less but it generate less pollution",
+    "grounding": [
+      {
+        "page": 4,
+        "bbox": {
+          "l": 179.99999999999997,
+          "t": 433.549632,
+          "r": 486.01881599999984,
+          "b": 410.4261743636363
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "list_item",
+    "level": 2,
+    "text": "Overloading particularly that of diesel vehicles be avoided and its engine/ nozzles condition be kept at an optimum level. Overloaded/untuned vehicles emit black smoke and consume more diesel.",
+    "grounding": [
+      {
+        "page": 4,
+        "bbox": {
+          "l": 180.0,
+          "t": 398.32933199999997,
+          "r": 486.1580940000001,
+          "b": 352.1658863636363
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "list_item",
+    "level": 2,
+    "text": "Plant trees and cover open spaces with grass.",
+    "grounding": [
+      {
+        "page": 4,
+        "bbox": {
+          "l": 179.99999999999997,
+          "t": 340.12916399999995,
+          "r": 381.4090139999999,
+          "b": 327.8646839999999
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "list_item",
+    "level": 2,
+    "text": "Take extra pre-caution during construction to avoid generation of dust.",
+    "grounding": [
+      {
+        "page": 4,
+        "bbox": {
+          "l": 179.99999999999997,
+          "t": 316.42885799999993,
+          "r": 484.17313199999944,
+          "b": 304.1643779999999
+        }
+      }
+    ],
+    "media": {}
+  },
+  {
+    "type": "list_item",
+    "level": 2,
+    "text": "Be friend of environment and motivate other people to care for the environment.",
+    "grounding": [
+      {
+        "page": 4,
+        "bbox": {
+          "l": 180.0,
+          "t": 292.6201,
+          "r": 486.02389799999844,
+          "b": 267.50674236363625
+        }
+      }
+    ],
+    "media": {}
+  }
+]
