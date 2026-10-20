@@ -1,32 +1,34 @@
 # Core Data Warehouse & Validation
-duckdb
-pandera
-pandas
-pyarrow
+duckdb==0.10.0
+pandera==0.18.0
+pandas==2.1.4
+pyarrow==15.0.0
 
 # HTTP & API Client
-httpx
-python-dotenv
+httpx==0.26.0
+python-dotenv==1.0.0
 
 # Modeling & Machine Learning
-scikit-learn
-lightgbm
-xgboost
-catboost
-numpy
+scikit-learn==1.4.0
+lightgbm==4.2.0
+xgboost==2.0.3
+catboost==1.2.2
+numpy==1.26.3
 
 # Orchestration & Pipeline
-prefect
+prefect==2.14.21
 
 # RAG & Embeddings
-chromadb
-sentence-transformers
-pdfplumber
+chromadb==0.4.22
+sentence-transformers==2.3.1
+pdfplumber==0.10.3
 
-# Dashboard / UI
-fastapi
-uvicorn[standard]
-react  # frontend built separately under frontend/
+# API & Web (Phase 3-C)
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+pydantic==2.5.3
+python-multipart==0.0.6
 
 # Testing & Code Quality
-pytest
+pytest==7.4.4
+
