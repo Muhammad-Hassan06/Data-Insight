@@ -4,7 +4,9 @@
 **Members:** Muhammad Feras Malik, Muhammad Hassan, Muhammad Ahmed Khan, Muhammad Sarim Umer  
 **Track:** Air Quality  
 **Problem:** Hourly PM2.5 forecasting and unhealthy-air warning system for Pakistani cities  
-**Cities:** Lahore, Karachi, Islamabad, Peshawar
+**Cities:** Lahore, Karachi, Islamabad, Peshawar  
+**Live Frontend:** [https://data-insight-two.vercel.app/](https://data-insight-two.vercel.app/)  
+**Live Backend API:** [https://data-insight-api-uybc.onrender.com/](https://data-insight-api-uybc.onrender.com/) ([Interactive Swagger Docs](https://data-insight-api-uybc.onrender.com/docs))
 
 ---
 
