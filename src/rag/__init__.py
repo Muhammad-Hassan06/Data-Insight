@@ -1,1 +1,1 @@
-"""RAG package for grounded insight generation citing gold rows and official docs."""
+"""RAG Insight Agent for PM2.5 Forecasting System."""

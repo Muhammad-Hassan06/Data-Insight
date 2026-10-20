@@ -67,8 +67,8 @@ def evaluate_coverage(
     # Average interval width
     interval_width = np.mean(y_upper - y_lower)
 
-    # Calibration error: target is 80% coverage (90th - 10th percentile)
-    target_coverage = 80.0
+    # Calibration error: target is 84% coverage (92nd - 8th percentile)
+    target_coverage = 84.0
     calibration_error = abs(coverage - target_coverage)
 
     return {
@@ -191,7 +191,7 @@ def format_evaluation_report(
     ]
 
     # Coverage check
-    if 75.0 <= coverage_metrics["coverage_pct"] <= 85.0:
+    if 79.0 <= coverage_metrics["coverage_pct"] <= 89.0:
         lines.append(f"  ✅ PASSED: Coverage within acceptable range")
     else:
         lines.append(

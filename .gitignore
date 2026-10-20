@@ -23,6 +23,16 @@ data/processed/*
 *.duckdb
 *.parquet
 
+# Model artifacts (large binary files)
+models/*.pkl
+models/*.cbm
+catboost_info/
+
+# RAG corpus (large files)
+corpus/chroma_db/
+corpus/extracted/
+corpus/*.pdf
+
 # Logs & Prefect
 *.log
 .prefect/

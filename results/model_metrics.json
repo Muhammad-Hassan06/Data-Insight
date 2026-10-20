@@ -1,64 +1,70 @@
 {
-  "model": "LightGBM Quantile Regression",
+  "model": "Hybrid Ensemble \u2014 LightGBM + CatBoost (averaged)",
+  "improvements": [
+    "Hybrid ensemble (simple averaging)",
+    "Dropped weak features (sensor_count, is_weekend)",
+    "Quantiles [0.08,0.92]",
+    "Season encoding bug fix"
+  ],
   "model_params": {
     "n_estimators": 500,
     "learning_rate": 0.05,
     "max_depth": 7,
     "num_leaves": 31,
     "quantiles": [
-      0.1,
+      0.08,
       0.5,
-      0.9
+      0.92
     ]
   },
   "data": {
     "train_samples": 37765,
     "test_samples": 9443,
-    "n_features": 22
+    "n_features": 20
   },
   "accuracy": {
-    "mae": 3.29,
-    "rmse": 5.05,
-    "mape": 13.23,
+    "mae": 3.93,
+    "rmse": 6.32,
+    "mape": 11.86,
     "baseline_mae": 11.65,
-    "improvement_pct": 71.78
+    "improvement_pct": 66.29
   },
   "uncertainty": {
-    "coverage_pct": 76.29,
-    "target_coverage_pct": 80.0,
-    "calibration_error": 3.71,
-    "mean_interval_width": 9.37
+    "coverage_pct": 83.3,
+    "target_coverage_pct": 84.0,
+    "calibration_error": 0.7,
+    "mean_interval_width": 13.74
   },
   "fairness": {
-    "worst_city": "Lahore",
+    "worst_city": "Peshawar",
     "by_city": [
       {
         "city": "Islamabad",
-        "samples": 1236,
-        "mae": 3.01,
-        "rmse": 4.67,
-        "coverage_pct": 76.54
+        "samples": 2383,
+        "mae": 3.08,
+        "rmse": 4.71,
+        "coverage_pct": 84.6
       },
       {
         "city": "Karachi",
-        "samples": 1145,
-        "mae": 1.72,
-        "rmse": 2.26,
-        "coverage_pct": 77.99
+        "samples": 2292,
+        "mae": 2.03,
+        "rmse": 2.89,
+        "coverage_pct": 84.51
       },
       {
         "city": "Lahore",
-        "samples": 1251,
-        "mae": 4.34,
-        "rmse": 6.34,
-        "coverage_pct": 74.26
+        "samples": 2398,
+        "mae": 5.02,
+        "rmse": 7.57,
+        "coverage_pct": 82.19
       },
       {
         "city": "Peshawar",
-        "samples": 1223,
-        "mae": 3.97,
-        "rmse": 5.77,
-        "coverage_pct": 76.53
+        "samples": 2370,
+        "mae": 5.51,
+        "rmse": 8.43,
+        "coverage_pct": 81.94
       }
     ]
   }

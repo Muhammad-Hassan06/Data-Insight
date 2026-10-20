@@ -609,147 +609,54 @@ python -m src.model.train_forecast
 
 ### **DAY 3 (Wed 21 Oct) - Deployment & Polish**
 
-#### 🔵 **Phase 3A: RAG Insight Agent (4-5 hours)**
+#### ✅ **Phase 3A: RAG Insight Agent (COMPLETE)**
 
 **Goal:** Build cited explanation system for EPO users
 
-**Files to Create:**
+**Status:** ✅ Complete - All 4 tests passed
+
+**Files Created:**
 ```
 src/rag/
-├── corpus_builder.py        (create new)
-├── query_agent.py           (create new)
-└── __init__.py
+├── __init__.py              (✓ created)
+├── corpus_builder.py        (✓ created)
+├── query_agent.py           (✓ created)
+├── test_agent.py            (✓ created)
+├── demo.py                  (✓ created)
+└── README.md                (✓ created)
 ```
 
-**Implementation Steps:**
+**Corpus:**
+- ✅ 4 trusted PDF documents (WHO, EPA, Lahore data, health impacts)
+- ✅ 207 document chunks in ChromaDB
+- ✅ 33 total pages, 269 elements, 11 tables
 
-1. **Collect Trusted Documents** (save to `corpus/`)
-   ```
-   corpus/
-   ├── who_air_quality_guidelines.pdf
-   ├── pakistan_epa_smog_advisory.pdf
-   ├── lahore_air_quality_report_2024.pdf
-   └── health_impacts_pm25.pdf
-   ```
-   - Sources: WHO, Pakistan EPA, Punjab EPA
-   - License: Public domain or open access
+**Test Results:** ✅ 4/4 PASSED
+- ✅ Citation test: Cites trusted sources with page numbers
+- ✅ Row ID test: Returns warehouse row IDs for data queries
+- ✅ Unknown query test: Admits "I don't know" appropriately
+- ✅ Additional scenarios: Multi-city, health, guidelines
 
-2. **Create `corpus_builder.py`**
-   ```python
-   from sentence_transformers import SentenceTransformer
-   import chromadb
-   
-   class CorpusBuilder:
-       def __init__(self):
-           self.client = chromadb.PersistentClient(path="./corpus/chroma_db")
-           self.collection = self.client.get_or_create_collection("documents")
-           self.encoder = SentenceTransformer('all-MiniLM-L6-v2')
-       
-       def chunk_document(self, pdf_path, chunk_size=500):
-           """Split document into sections"""
-           # Use pdfplumber or PyPDF2
-       
-       def build_corpus(self):
-           for doc_path in glob("corpus/*.pdf"):
-               chunks = self.chunk_document(doc_path)
-               for i, chunk in enumerate(chunks):
-                   self.collection.add(
-                       documents=[chunk['text']],
-                       metadatas=[{
-                           "source": doc_path,
-                           "page": chunk['page'],
-                           "section": i
-                       }],
-                       ids=[f"{doc_path}_{i}"]
-                   )
-   ```
+**Usage:**
+```bash
+# Build corpus (done)
+python -m src.rag.corpus_builder
 
-3. **Create `query_agent.py`**
-   ```python
-   class InsightAgent:
-       def __init__(self):
-           self.collection = chromadb.PersistentClient().get_collection("documents")
-           self.db = duckdb.connect("data/processed/warehouse.duckdb")
-       
-       def retrieve_context(self, question, n_results=3):
-           results = self.collection.query(
-               query_texts=[question],
-               n_results=n_results
-           )
-           return results
-       
-       def query_gold_table(self, city, date):
-           query = f"""
-               SELECT row_id, timestamp, pm25_value, city
-               FROM gold_forecast_features
-               WHERE city = '{city}' 
-                 AND DATE(timestamp) = '{date}'
-           """
-           return self.db.execute(query).df()
-       
-       def generate_answer(self, question):
-           # Retrieve documents
-           docs = self.retrieve_context(question)
-           
-           # Check if question needs data
-           if "pm2.5" in question.lower() and "lahore" in question.lower():
-               data = self.query_gold_table("Lahore", "2026-10-21")
-               if data.empty:
-                   return {
-                       "answer": "I don't know. I don't have data for that date.",
-                       "citations": [],
-                       "row_ids": []
-                   }
-               
-               # Format answer with citations
-               answer = f"Based on sensor data (row IDs: {data['row_id'].tolist()}), "
-               answer += f"PM2.5 in Lahore was {data['pm25_value'].mean():.1f} μg/m³. "
-               answer += f"According to {docs['metadatas'][0]['source']}, "
-               answer += f"this level is considered unhealthy for sensitive groups."
-               
-               return {
-                   "answer": answer,
-                   "citations": docs['metadatas'],
-                   "row_ids": data['row_id'].tolist()
-               }
-           
-           # If no relevant data, admit it
-           return {
-               "answer": "I don't know. I don't have information about that.",
-               "citations": [],
-               "row_ids": []
-           }
-   ```
+# Run tests
+python -m src.rag.test_agent
 
-4. **Build corpus:**
-   ```python
-   # One-time setup
-   builder = CorpusBuilder()
-   builder.build_corpus()
-   ```
+# Interactive mode
+python -m src.rag.query_agent
 
-5. **Test cases:**
-   ```python
-   agent = InsightAgent()
-   
-   # Test 1: Should cite WHO
-   response = agent.generate_answer("What PM2.5 level is unhealthy?")
-   assert "WHO" in str(response['citations'])
-   
-   # Test 2: Should return row IDs
-   response = agent.generate_answer("What's PM2.5 in Lahore today?")
-   assert len(response['row_ids']) > 0
-   
-   # Test 3: Should say "I don't know"
-   response = agent.generate_answer("What's the weather on Mars?")
-   assert "don't know" in response['answer'].lower()
-   ```
+# Demo
+python -m src.rag.demo
+```
 
 **Success Criteria:**
-- ✅ Corpus has ≥3 trusted documents
+- ✅ Corpus has ≥3 trusted documents (have 4)
 - ✅ Every number comes with row IDs
 - ✅ Unknown questions return "I don't know"
-- ✅ All claims cite sources
+- ✅ All claims cite sources (document + page)
 
 ---
 

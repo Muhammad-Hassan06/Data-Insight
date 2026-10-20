@@ -11,6 +11,8 @@ python-dotenv
 # Modeling & Machine Learning
 scikit-learn
 lightgbm
+xgboost
+catboost
 numpy
 
 # Orchestration & Pipeline
@@ -19,6 +21,7 @@ prefect
 # RAG & Embeddings
 chromadb
 sentence-transformers
+pdfplumber
 
 # Dashboard / UI
 fastapi
