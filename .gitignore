@@ -22,6 +22,8 @@ data/processed/*
 !data/processed/.gitkeep
 *.duckdb
 *.parquet
+!predictions/
+!predictions/*.parquet
 
 # Model artifacts (large binary files)
 models/*.pkl
