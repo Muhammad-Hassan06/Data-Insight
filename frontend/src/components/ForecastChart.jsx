@@ -72,17 +72,24 @@ export default function ForecastChart({ city }) {
   const [error, setError] = useState(null);
   const [generatedAt, setGeneratedAt] = useState('');
   const [useMock, setUseMock] = useState(false);
+  const [connectionError, setConnectionError] = useState(false);
 
   const loadForecast = useCallback(async () => {
     setLoading(true);
     setError(null);
+    setConnectionError(false);
 
     try {
       const response = await forecastAPI.getCityForecast(city);
       const result = response.data;
       formatAndSetData(result);
       setUseMock(false);
+      setConnectionError(false);
     } catch (err) {
+      console.error('Forecast API error:', err);
+      setConnectionError(true);
+      setError(err.response?.data?.detail || err.message || 'Failed to load forecast');
+      
       // Fallback to mock data
       const mock = getMockCityForecast(city);
       formatAndSetData(mock);
@@ -144,6 +151,45 @@ export default function ForecastChart({ city }) {
 
   return (
     <div className="chart-container">
+      {/* Connection Status Warning */}
+      {connectionError && (
+        <div style={{
+          background: 'rgba(234, 179, 8, 0.1)',
+          border: '1px solid rgba(234, 179, 8, 0.3)',
+          borderRadius: '8px',
+          padding: '12px 16px',
+          marginBottom: '16px',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '12px'
+        }}>
+          <AlertCircle size={20} style={{ color: '#eab308', flexShrink: 0 }} />
+          <div style={{ flex: 1 }}>
+            <div style={{ fontWeight: 600, color: '#eab308', marginBottom: '4px' }}>
+              Backend Connection Failed
+            </div>
+            <div style={{ fontSize: '0.875rem', color: 'var(--text-muted)' }}>
+              Showing demo data. Error: {error}
+            </div>
+          </div>
+          <button
+            onClick={loadForecast}
+            style={{
+              background: 'rgba(234, 179, 8, 0.2)',
+              border: '1px solid rgba(234, 179, 8, 0.4)',
+              borderRadius: '6px',
+              padding: '6px 12px',
+              color: '#eab308',
+              cursor: 'pointer',
+              fontSize: '0.875rem',
+              fontWeight: 500
+            }}
+          >
+            Retry
+          </button>
+        </div>
+      )}
+
       {/* Current status bar */}
       <div className="dashboard-grid" style={{ gridTemplateColumns: 'repeat(4, 1fr)', marginBottom: 'var(--space-lg)' }}>
         <div className="stat-card accent">
@@ -196,7 +242,7 @@ export default function ForecastChart({ city }) {
               24-Hour PM2.5 Forecast — {city}
             </div>
             <div className="card-subtitle">
-              {useMock ? 'Demo data • ' : ''}
+              {useMock && <span style={{ color: '#eab308', fontWeight: 600 }}>⚠️ Demo Mode • </span>}
               Generated {generatedAt ? new Date(generatedAt).toLocaleString() : 'N/A'}
             </div>
           </div>

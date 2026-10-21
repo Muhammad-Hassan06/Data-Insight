@@ -7,10 +7,8 @@ Purpose: Serve hourly 24-hour ahead PM2.5 forecasts with prediction intervals fo
 from typing import List
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
-import math
-import random
-import pandas as pd
 from fastapi import APIRouter, HTTPException
+import pandas as pd
 from backend.models.schemas import CityForecastResponse, AllForecastsResponse, ForecastItem
 
 router = APIRouter(prefix="/forecast", tags=["Forecast"])
@@ -20,61 +18,18 @@ PROJECT_ROOT = Path(__file__).resolve().parents[2]
 PREDICTIONS_DIR = PROJECT_ROOT / "predictions"
 PREDICTIONS_PATH = PREDICTIONS_DIR / "latest_forecast.parquet"
 
-# City baseline parameters for realistic PM2.5 diurnal cycles
-CITY_BASELINES = {
-    "Lahore": {"base": 65.0, "amplitude": 22.0, "lower_offset": 8.5, "upper_offset": 9.5},
-    "Karachi": {"base": 28.0, "amplitude": 10.0, "lower_offset": 4.5, "upper_offset": 5.0},
-    "Islamabad": {"base": 42.0, "amplitude": 14.0, "lower_offset": 6.0, "upper_offset": 7.0},
-    "Peshawar": {"base": 55.0, "amplitude": 18.0, "lower_offset": 7.5, "upper_offset": 8.5},
-}
-
-
-def _generate_seed_forecasts() -> pd.DataFrame:
-    """Generate realistic 24-hour ahead PM2.5 forecasts with uncertainty intervals."""
-    PREDICTIONS_DIR.mkdir(parents=True, exist_ok=True)
-    now = datetime.now(timezone.utc).replace(minute=0, second=0, microsecond=0)
-    all_rows = []
-
-    for city in CITIES:
-        cfg = CITY_BASELINES[city]
-        base = cfg["base"]
-        amp = cfg["amplitude"]
-        lower_off = cfg["lower_offset"]
-        upper_off = cfg["upper_offset"]
-
-        for h in range(1, 25):
-            target_time = now + timedelta(hours=h)
-            hour_of_day = target_time.hour
-            # Diurnal atmospheric smog cycle: peak in morning (08:00) and evening (20:00)
-            diurnal = math.sin(((hour_of_day - 6) * math.pi) / 12) * amp
-            pseudo_noise = math.sin(h * 1.5 + len(city)) * 2.5
-            median = max(5.0, round(base + diurnal + pseudo_noise, 2))
-            lower = max(2.0, round(median - lower_off, 2))
-            upper = round(median + upper_off, 2)
-
-            all_rows.append({
-                "city": city,
-                "timestamp": target_time.isoformat(),
-                "forecast_hour": h,
-                "pm25_median": median,
-                "pm25_lower": lower,
-                "pm25_upper": upper,
-                "generated_at": now.isoformat(),
-            })
-
-    df = pd.DataFrame(all_rows)
-    df.to_parquet(PREDICTIONS_PATH, index=False)
-    return df
-
 
 def _get_forecast_dataframe() -> pd.DataFrame:
-    """Read the latest forecast dataframe, generating seed data if missing."""
+    """Read the latest forecast dataframe from trained models."""
     if not PREDICTIONS_PATH.exists():
-        return _generate_seed_forecasts()
+        raise FileNotFoundError(
+            f"Forecast file not found at {PREDICTIONS_PATH}. "
+            "Run the hourly pipeline first: python -m src.flows.hourly_pipeline"
+        )
     try:
         return pd.read_parquet(PREDICTIONS_PATH)
-    except Exception:
-        return _generate_seed_forecasts()
+    except Exception as e:
+        raise RuntimeError(f"Failed to load forecast data: {e}")
 
 
 @router.get("/cities", response_model=List[str])

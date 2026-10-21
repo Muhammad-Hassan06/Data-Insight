@@ -26,8 +26,8 @@ data/processed/*
 !predictions/*.parquet
 
 # Model artifacts (large binary files)
-models/*.pkl
-models/*.cbm
+# models/*.pkl
+# models/*.cbm
 catboost_info/
 
 # RAG corpus (large files)

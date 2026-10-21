@@ -1,0 +1,44 @@
+{
+  "cities": {
+    "Lahore": {
+      "location_ids": [8664, 1894641, 4515157, 4527035, 4527173, 4527306, 4527402, 4554729, 4555745, 4557686],
+      "coordinates": {"lat": 31.5497, "lon": 74.3436}
+    },
+    "Karachi": {
+      "location_ids": [8668, 1894644, 4791924, 4837113, 4837117, 4838712, 4847173, 4840233, 4932783, 4985886],
+      "coordinates": {"lat": 24.8607, "lon": 67.0011}
+    },
+    "Islamabad": {
+      "location_ids": [8665, 1894642, 4515644, 4554236, 4556719, 4565419, 4565932, 4566426, 4567363, 4567364],
+      "coordinates": {"lat": 33.6844, "lon": 73.0479}
+    },
+    "Peshawar": {
+      "location_ids": [4600078, 4605118, 4607067, 4608423, 4608419, 4609262, 4609354, 4609307, 4952332, 6135308],
+      "coordinates": {"lat": 34.0151, "lon": 71.5249}
+    }
+  },
+  "fetch_settings": {
+    "lookback_hours": 48,
+    "min_records_threshold": 10,
+    "retry_attempts": 3
+  },
+  "model_settings": {
+    "forecast_horizon_hours": 24,
+    "season_encoding": {
+      "winter": 0,
+      "spring": 1,
+      "summer": 2,
+      "autumn": 3,
+      "fall": 3
+    },
+    "exclude_features": [
+      "row_id",
+      "city",
+      "timestamp_utc",
+      "pm25_ugm3",
+      "any_flagged",
+      "sensor_count",
+      "is_weekend"
+    ]
+  }
+}
