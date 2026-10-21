@@ -3,7 +3,19 @@ Hourly PM2.5 Forecasting Pipeline with Prefect
 Automated workflow for data fetching, processing, and forecasting
 """
 
-from prefect import flow, task
+try:
+    from prefect import flow, task
+except ImportError:
+    def task(*d_args, **d_kwargs):
+        def decorator(fn):
+            return fn
+        return decorator
+
+    def flow(*d_args, **d_kwargs):
+        def decorator(fn):
+            return fn
+        return decorator
+
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 import duckdb
@@ -297,11 +309,11 @@ def update_forecasts() -> Dict[str, int]:
         cb_upper = cb.CatBoost()
         cb_upper.load_model(str(models_dir / "cb_upper.cbm"))
         
-        logger.info("✓ Loaded 6 models: 3 LightGBM + 3 CatBoost")
+        logger.info("[OK] Loaded 6 models: 3 LightGBM + 3 CatBoost")
         
     except Exception as e:
-        logger.error(f"✗ Failed to load models: {e}")
-        return {"forecast_count": 0, "status": "error", "message": "Model loading failed"}
+        logger.error(f"[X] Failed to load models: {e}")
+        return {"forecast_count": 0, "status": "error", "message": f"Model loading failed: {e}"}
     
     # Load latest data from warehouse
     db_path = Path("data/processed/warehouse.duckdb")
@@ -397,10 +409,10 @@ def update_forecasts() -> Dict[str, int]:
                     'model_version': 'hybrid_lgb_cb_v1.0'
                 })
             
-            logger.info(f"  ✓ Forecast: {ensemble_median:.2f} µg/m³ (range: {ensemble_lower:.2f}-{ensemble_upper:.2f})")
+            logger.info(f"  [OK] Forecast: {ensemble_median:.2f} µg/m³ (range: {ensemble_lower:.2f}-{ensemble_upper:.2f})")
             
         except Exception as e:
-            logger.error(f"  ✗ Error generating forecast for {city}: {e}")
+            logger.error(f"  [X] Error generating forecast for {city}: {e}")
             continue
     
     if not all_forecasts:
@@ -414,7 +426,7 @@ def update_forecasts() -> Dict[str, int]:
     
     # Save latest forecast
     forecasts_df.to_parquet(output_dir / "latest_forecast.parquet", index=False)
-    logger.info(f"\n✓ Saved to: predictions/latest_forecast.parquet")
+    logger.info(f"\n[OK] Saved to: predictions/latest_forecast.parquet")
     
     # Also save timestamped version for history
     timestamp_str = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")

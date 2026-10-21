@@ -1,16 +1,14 @@
 {
-  "model": "Hybrid Ensemble — LightGBM + CatBoost (Weighted Average with Momentum)",
+  "model": "Hybrid Ensemble — LightGBM + CatBoost (Variance-Weighted)",
   "improvements": [
-    "Hybrid ensemble (variance-weighted averaging)",
+    "Hybrid ensemble (LightGBM + CatBoost averaged)",
     "Dropped weak features (sensor_count, is_weekend)",
     "Quantiles calibrated to [0.08, 0.92] (84% interval target)",
-    "Season encoding bug fix (autumn vs fall)",
-    "Rate-of-change momentum delta features (pm25_delta_1h, pm25_delta_24h)",
-    "Per-city hyperparameter regularisation addressing coastal vs basin dynamics"
+    "Season encoding bug fix (autumn vs fall)"
   ],
   "model_params": {
-    "n_estimators": 650,
-    "learning_rate": 0.04,
+    "n_estimators": 500,
+    "learning_rate": 0.05,
     "max_depth": 7,
     "num_leaves": 31,
     "quantiles": [
@@ -22,20 +20,20 @@
   "data": {
     "train_samples": 37765,
     "test_samples": 9443,
-    "n_features": 22
+    "n_features": 20
   },
   "accuracy": {
-    "mae": 2.78,
-    "rmse": 4.31,
-    "mape": 9.84,
+    "mae": 3.93,
+    "rmse": 6.32,
+    "mape": 11.86,
     "baseline_mae": 11.65,
-    "improvement_pct": 76.14
+    "improvement_pct": 66.29
   },
   "uncertainty": {
-    "coverage_pct": 84.1,
+    "coverage_pct": 83.3,
     "target_coverage_pct": 84.0,
-    "calibration_error": 0.1,
-    "mean_interval_width": 11.82
+    "calibration_error": 0.7,
+    "mean_interval_width": 13.74
   },
   "fairness": {
     "worst_city": "Peshawar",
@@ -43,30 +41,30 @@
       {
         "city": "Karachi",
         "samples": 2292,
-        "mae": 1.48,
-        "rmse": 2.12,
-        "coverage_pct": 84.9
+        "mae": 2.03,
+        "rmse": 2.89,
+        "coverage_pct": 84.51
       },
       {
         "city": "Islamabad",
         "samples": 2383,
-        "mae": 2.42,
-        "rmse": 3.65,
-        "coverage_pct": 84.5
+        "mae": 3.08,
+        "rmse": 4.71,
+        "coverage_pct": 84.6
       },
       {
         "city": "Lahore",
         "samples": 2398,
-        "mae": 3.45,
-        "rmse": 5.21,
-        "coverage_pct": 83.8
+        "mae": 5.02,
+        "rmse": 7.57,
+        "coverage_pct": 82.19
       },
       {
         "city": "Peshawar",
         "samples": 2370,
-        "mae": 3.77,
-        "rmse": 5.89,
-        "coverage_pct": 83.2
+        "mae": 5.51,
+        "rmse": 8.43,
+        "coverage_pct": 81.94
       }
     ]
   }

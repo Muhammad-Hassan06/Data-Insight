@@ -102,21 +102,19 @@ async def get_freshness() -> FreshnessResponse:
         except Exception:
             pass
 
-    # Fallback to verified warehouse stats with active heartbeat
+    # Honest fallback when database is missing or uninitialized
     if not pm25_detail:
-        pm25_time = (now - timedelta(minutes=30)).isoformat()
         pm25_detail = FreshnessDetail(
-            last_updated=pm25_time,
-            row_count=338985,
-            status="fresh",
+            last_updated=(now - timedelta(hours=24)).isoformat(),
+            row_count=0,
+            status="stale",
         )
 
     if not weather_detail:
-        weather_time = (now - timedelta(minutes=45)).isoformat()
         weather_detail = FreshnessDetail(
-            last_updated=weather_time,
-            row_count=70176,
-            status="fresh",
+            last_updated=(now - timedelta(hours=24)).isoformat(),
+            row_count=0,
+            status="stale",
         )
 
     return FreshnessResponse(pm25=pm25_detail, weather=weather_detail)

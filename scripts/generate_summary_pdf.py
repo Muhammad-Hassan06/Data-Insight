@@ -147,7 +147,7 @@ def build_summary_pdf():
     perf_data = [
         [Paragraph("<b>Model Evaluation</b>", cell_bold), Paragraph("<b>Overall MAE</b>", cell_bold), Paragraph("<b>RMSE</b>", cell_bold), Paragraph("<b>MAPE</b>", cell_bold), Paragraph("<b>84% Interval Coverage</b>", cell_bold), Paragraph("<b>vs. Declared Baseline</b>", cell_bold)],
         [Paragraph("Persistence Baseline (y[t] = y[t-24h])", cell_style), Paragraph("11.65 µg/m³", cell_style), Paragraph("17.74", cell_style), Paragraph("34.74%", cell_style), Paragraph("N/A (Point forecast)", cell_style), Paragraph("Baseline reference", cell_style)],
-        [Paragraph("<b>Hybrid Ensemble (LightGBM + CatBoost)</b>", cell_style), Paragraph("<b>2.78 µg/m³</b>", cell_bold), Paragraph("<b>4.31</b>", cell_style), Paragraph("<b>9.84%</b>", cell_style), Paragraph("<b>84.10% (calibrated)</b>", cell_bold), Paragraph("<b>76.14% Improvement ✅</b>", cell_bold)],
+        [Paragraph("<b>Hybrid Ensemble (LightGBM + CatBoost)</b>", cell_style), Paragraph("<b>3.93 µg/m³</b>", cell_bold), Paragraph("<b>6.32</b>", cell_style), Paragraph("<b>11.86%</b>", cell_style), Paragraph("<b>83.30% (calibrated)</b>", cell_bold), Paragraph("<b>66.29% Improvement ✅</b>", cell_bold)],
     ]
     t_perf = Table(perf_data, colWidths=[160, 75, 55, 60, 110, 100])
     t_perf.setStyle(TableStyle([
@@ -165,10 +165,10 @@ def build_summary_pdf():
     fairness_data = [
         [
             Paragraph("<b>City Fairness Breakdown:</b>", cell_bold),
-            Paragraph("<b>Karachi:</b> MAE 1.48 | Cov 84.9%", cell_style),
-            Paragraph("<b>Islamabad:</b> MAE 2.42 | Cov 84.5%", cell_style),
-            Paragraph("<b>Lahore:</b> MAE 3.45 | Cov 83.8%", cell_style),
-            Paragraph("<b>Peshawar (Weakest):</b> MAE 3.77 | Cov 83.2%", cell_style),
+            Paragraph("<b>Karachi:</b> MAE 2.03 | Cov 84.5%", cell_style),
+            Paragraph("<b>Islamabad:</b> MAE 3.08 | Cov 84.6%", cell_style),
+            Paragraph("<b>Lahore:</b> MAE 5.02 | Cov 82.2%", cell_style),
+            Paragraph("<b>Peshawar (Weakest):</b> MAE 5.51 | Cov 81.9%", cell_style),
         ]
     ]
     t_fair = Table(fairness_data, colWidths=[110, 110, 110, 110, 120])

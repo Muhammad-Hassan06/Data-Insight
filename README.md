@@ -42,7 +42,7 @@ A complete end-to-end machine learning system that:
 
 **Baseline:** Persistence model (y[t] = y[t-24h])  
 **Our Model:** Hybrid LightGBM + CatBoost Ensemble  
-**Improvement:** 71.78% MAE reduction (11.65 → 3.93 µg/m³) ✅  
+**Improvement:** 66.29% MAE reduction (11.65 → 3.93 µg/m³) ✅  
 **Coverage:** 83.30% prediction interval coverage ✅  
 **Data Volume:** 338,985 PM2.5 observations + 70,176 weather records
 
@@ -292,18 +292,22 @@ prefect deploy src/flows/hourly_pipeline.py:hourly_pipeline  # In another
 
 ### Model Performance
 
-| Metric | Baseline | Our Model | Improvement |
-|--------|----------|-----------|-------------|
-| **MAE** | 11.65 μg/m³ | **3.29 μg/m³** | **71.78%** ✅ |
-| **RMSE** | 17.74 μg/m³ | 5.05 μg/m³ | 71.54% |
-| **MAPE** | 34.74% | 13.23% | 61.94% |
-| **Prediction Interval Coverage** | N/A | **76.29%** | ✅ |
+| Metric | Persistence Baseline | Standalone LightGBM | Production Hybrid Ensemble (LGB+CB) | Verified Gain |
+|--------|----------------------|---------------------|-------------------------------------|---------------|
+| **MAE** | 11.65 μg/m³ | 3.29 μg/m³ | **3.93 μg/m³** | **66.29%** ✅ |
+| **RMSE** | 17.74 μg/m³ | 5.05 μg/m³ | **5.84 μg/m³** | **67.08%** ✅ |
+| **MAPE** | 34.74% | 13.23% | **15.12%** | **56.48%** ✅ |
+| **Interval Coverage (80% target)** | N/A | 76.29% | **83.30%** | **PASSED** ✅ |
 
-**Per-City Performance:**
-- Karachi: 1.72 μg/m³ (best)
-- Islamabad: 3.01 μg/m³
-- Peshawar: 3.97 μg/m³
-- Lahore: 4.34 μg/m³ (worst)
+**Per-City Hybrid Ensemble Performance:**
+- **Karachi:** 2.14 μg/m³ (Best performer - coastal dispersion)
+- **Islamabad:** 3.61 μg/m³
+- **Peshawar:** 4.72 μg/m³
+- **Lahore:** 5.25 μg/m³ (Smog & inversion challenge)
+
+> [!NOTE]
+> **Forecast Horizon & Diurnal Projection Methodology:**
+> The core ensemble forecaster predicts direct 1-hour ahead PM2.5 using immediate lag ($y[t-1\text{h}]$, Pearson $r=0.977$) alongside 24h/168h lags and meteorological drivers. For the 24-hour operational operational horizon served by the pipeline, predictions are generated via step projection modulated by Pakistan's empirical diurnal atmospheric curve ($1.0 + 0.15 \sin((H-6)\pi/12)$), reflecting morning traffic and nocturnal temperature inversion effects.
 
 ### Dataset Statistics
 

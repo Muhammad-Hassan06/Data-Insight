@@ -112,7 +112,7 @@ class WeatherFetcher:
                 'longitude': coords['lon']
             })
             
-            print(f"✓ {len(df)} records")
+            print(f"[OK] {len(df)} records")
             
             return df
             

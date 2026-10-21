@@ -188,6 +188,24 @@ async def ask_agent(payload: AskQuestionRequest) -> AskQuestionResponse:
     # Extract match from pre-extracted corpus
     match = _search_extracted_corpus(question)
 
+    # Query real verified row IDs from gold warehouse if available
+    real_row_ids = []
+    gold_count = 0
+    proc_db = PROJECT_ROOT / "data" / "processed" / "warehouse.duckdb"
+    if proc_db.exists():
+        try:
+            import duckdb
+            con = duckdb.connect(str(proc_db), read_only=True)
+            if city_name:
+                r_rows = con.execute("SELECT row_id FROM gold_forecast_features WHERE city = ? ORDER BY timestamp_utc DESC LIMIT 5", [city_name]).fetchall()
+            else:
+                r_rows = con.execute("SELECT row_id FROM gold_forecast_features ORDER BY timestamp_utc DESC LIMIT 5").fetchall()
+            real_row_ids = [int(r[0]) for r in r_rows]
+            gold_count = int(con.execute("SELECT COUNT(*) FROM gold_forecast_features").fetchone()[0])
+            con.close()
+        except Exception:
+            pass
+
     if match:
         answer = f"According to {match['source']} (p.{match['page']}): {match['text']}"
         if city_context:
@@ -197,8 +215,8 @@ async def ask_agent(payload: AskQuestionRequest) -> AskQuestionResponse:
             answer=answer,
             urdu_summary=_generate_urdu_summary(city_name),
             citations=[CitationItem(source=match["source"], page=match["page"])],
-            row_ids=[1024, 1025, 1026, 2048, 2049],
-            data_points=338985,
+            row_ids=real_row_ids,
+            data_points=gold_count,
         )
 
     # Verified grounded answer for general air quality questions
@@ -219,8 +237,8 @@ async def ask_agent(payload: AskQuestionRequest) -> AskQuestionResponse:
             CitationItem(source="WHO Air Quality Guidelines", page=12),
             CitationItem(source="Pakistan EPA Smog Advisory", page=3),
         ],
-        row_ids=[1024, 1025, 1026, 2048, 2049],
-        data_points=338985,
+        row_ids=real_row_ids,
+        data_points=gold_count,
     )
 
 

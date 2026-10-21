@@ -27,7 +27,8 @@ def main():
     print("\nEstimated time: 5-15 minutes")
     print("="*80 + "\n")
     
-    input("Press Enter to continue or Ctrl+C to cancel...")
+    # Non-interactive execution for automated pipelines and make data
+    print("Starting automated data fetch...")
     
     try:
         # Step 1: Fetch PM2.5 data from OpenAQ
