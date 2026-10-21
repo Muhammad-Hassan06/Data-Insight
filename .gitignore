@@ -16,11 +16,13 @@ ENV/
 # Large data & warehouse artifacts
 data/raw/*
 !data/raw/.gitkeep
-data/cleaned/*
+# data/cleaned/*
 !data/cleaned/.gitkeep
-data/processed/*
+!data/cleaned/warehouse.duckdb
+# data/processed/*
 !data/processed/.gitkeep
-*.duckdb
+!data/processed/warehouse.duckdb
+# *.duckdb  # Commented: Allow DuckDB files for Render deployment
 *.parquet
 !predictions/
 !predictions/*.parquet

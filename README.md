@@ -1087,12 +1087,64 @@ Detailed docs in `Documentation/`:
 
 ## 🔮 Future Improvements
 
+### Database & Storage
+- [ ] **Migrate to Supabase PostgreSQL** - Replace local DuckDB with cloud PostgreSQL for persistent storage across deployments. This would enable:
+  - Real-time data updates on production (Render)
+  - Live dataset statistics that update automatically
+  - True hourly pipeline execution in cloud environment
+  - No need to commit database files to Git
+- [ ] **S3/R2 for large data** - Archive historical data without bloating Git repo
+
+### Features & Models
 - [ ] Add more cities (Multan, Faisalabad, Quetta)
 - [ ] Incorporate satellite data (NASA FIRMS for fires)
 - [ ] Deep learning models (LSTM, Transformer)
-- [ ] Real-time dashboard with React + FastAPI
+- [ ] Multi-step forecasting (48h, 72h ahead)
+
+### User Experience
 - [ ] Mobile app for citizens
 - [ ] SMS/email alerts for unhealthy air days
+- [ ] Push notifications when AQI crosses thresholds
+- [ ] Share forecast images on social media
+
+---
+
+## 🏗️ Architecture Notes
+
+### Current Data Architecture
+
+**Local Development:**
+- ✅ Hourly cron job runs pipeline on local PC
+- ✅ Updates DuckDB warehouse files (13MB)
+- ✅ Generates forecasts to `predictions/*.parquet`
+- ✅ All features work: forecasts + live stats + RAG agent
+
+**Production (Render + Vercel):**
+- ✅ Backend serves forecasts from committed `.parquet` files
+- ✅ RAG agent works with committed corpus
+- ⚠️ Live dataset stats serve **static snapshot** (database files committed to Git)
+- ⚠️ No hourly updates (Render free tier = web service only, no cron)
+
+### Why Static Database on Production?
+
+1. **Render free tier limitations:**
+   - Web service only (no background workers/cron)
+   - Ephemeral filesystem (resets on each deploy)
+   - 15-minute request timeout (pipeline takes 5-10 min)
+
+2. **Git-based deployment:**
+   - DuckDB files (13MB) committed to Git for Render access
+   - Updated via local cron + manual git push
+   - Not ideal but works for hackathon demo
+
+3. **Better alternative (Supabase):**
+   - PostgreSQL database with persistent storage
+   - Could run pipeline on Render with DB writes to Supabase
+   - Live stats would query Supabase instead of local DuckDB
+   - No need to commit database files
+   - True cloud-native architecture
+
+**Trade-off Decision:** For this hackathon, we prioritized working features over perfect architecture. Production serves real forecasts from committed Parquet files, while live stats show the most recent data snapshot from committed DuckDB files.
 
 ---
 
