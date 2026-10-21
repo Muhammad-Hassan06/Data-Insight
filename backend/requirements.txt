@@ -8,3 +8,4 @@ pyarrow>=15.0.0
 python-dotenv>=1.0.0
 pytest>=7.4.4
 httpx>=0.26.0
+pytz>=2023.3
