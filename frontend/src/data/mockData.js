@@ -58,12 +58,12 @@ export function getMockFreshness() {
   return {
     pm25: {
       last_updated: new Date(now.getTime() - 1800000).toISOString(),
-      row_count: 338985,
+      row_count: 331731,
       status: 'fresh',
     },
     weather: {
       last_updated: new Date(now.getTime() - 2400000).toISOString(),
-      row_count: 70176,
+      row_count: 168480,
       status: 'fresh',
     },
   };
@@ -72,20 +72,20 @@ export function getMockFreshness() {
 export function getMockStats() {
   return {
     cleaned: {
-      pm25_rows: 338985,
-      weather_rows: 70176,
+      pm25_rows: 331731,
+      weather_rows: 168480,
       cities: 4,
       date_range: {
-        start: '2022-06-01T00:00:00',
-        end: '2026-10-20T12:00:00',
+        start: '2022-01-08T00:00:00',
+        end: '2026-10-20T23:00:00',
       },
     },
     processed: {
-      gold_rows: 47208,
+      gold_rows: 76305,
       cities: 4,
       date_range: {
-        start: '2022-06-08T00:00:00',
-        end: '2026-10-20T12:00:00',
+        start: '2022-01-08T00:00:00',
+        end: '2026-10-20T23:00:00',
       },
     },
   };
@@ -129,8 +129,8 @@ export const MODEL_METRICS = {
     by_city: [
       { city: 'Karachi', samples: 2292, mae: 1.48, rmse: 2.31, coverage_pct: 85.2 },
       { city: 'Islamabad', samples: 2383, mae: 2.42, rmse: 3.78, coverage_pct: 84.8 },
-      { city: 'Lahore', samples: 2398, mae: 3.89, rmse: 5.92, coverage_pct: 83.1 },
-      { city: 'Peshawar', samples: 2370, mae: 3.97, rmse: 6.21, coverage_pct: 82.9 },
+      { city: 'Lahore', samples: 2398, mae: 3.45, rmse: 5.23, coverage_pct: 83.6 },
+      { city: 'Peshawar', samples: 2370, mae: 3.77, rmse: 5.89, coverage_pct: 83.1 },
     ],
   },
 };
@@ -154,21 +154,21 @@ export const PIPELINE_STAGES = [
     id: 1,
     title: 'Data Ingestion',
     description: 'Fetches hourly PM2.5 from OpenAQ v3 and weather from Open-Meteo for 4 cities with rate-limiting and retry logic.',
-    stats: { records: '409K+', sources: 2, files: 8 },
+    stats: { records: '500K+', sources: 2, files: 8 },
     status: 'completed',
   },
   {
     id: 2,
     title: 'Data Cleaning',
     description: 'Timezone standardization, deduplication, outlier flagging (PM2.5 > 999), range validation on weather, and decision logging.',
-    stats: { pm25_rows: '338,985', weather_rows: '70,176', issues: 0 },
+    stats: { pm25_rows: '331,731', weather_rows: '168,480', issues: 0 },
     status: 'completed',
   },
   {
     id: 3,
     title: 'Feature Engineering',
     description: 'Aggregates PM2.5 to city-level hourly medians, merges weather, engineers 27 features (lags, rolling stats, temporal, weather).',
-    stats: { features: 27, gold_rows: '47,208', null_rate: '0%' },
+    stats: { features: 27, gold_rows: '76,305', null_rate: '0%' },
     status: 'completed',
   },
   {
