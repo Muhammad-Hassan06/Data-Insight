@@ -43,6 +43,10 @@ corpus/pdfs/*.pdf
 # Hackathon guide documentation (large PDF extractions)
 Hackinsight Details/
 
+# Audit reports (generated)
+AUDIT_REPORT.md
+FINAL_AUDIT_REPORT.md
+
 # OS files
 .DS_Store
 Thumbs.db

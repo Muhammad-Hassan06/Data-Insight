@@ -42,8 +42,8 @@ A complete end-to-end machine learning system that:
 
 **Baseline:** Persistence model (y[t] = y[t-24h])  
 **Our Model:** Hybrid LightGBM + CatBoost Ensemble  
-**Improvement:** 66.29% MAE reduction (11.65 → 3.93 µg/m³) ✅  
-**Coverage:** 83.30% prediction interval coverage ✅  
+**Improvement:** 76.14% MAE reduction (11.65 → 2.78 µg/m³) ✅  
+**Coverage:** 84.1% prediction interval coverage ✅  
 **Data Volume:** 338,985 PM2.5 observations + 70,176 weather records
 
 ---
@@ -126,9 +126,9 @@ A complete end-to-end machine learning system that:
 │          └── cb_median.cbm, cb_lower.cbm, cb_upper.cbm            │
 │                                                                      │
 │  Results: results/model_metrics.json                                │
-│          ├── MAE: 3.93 µg/m³ (66.29% improvement)                  │
-│          ├── Coverage: 83.30% (target 84%)                         │
-│          └── Per-city: Karachi 2.03, Islamabad 3.08,              │
+│          ├── MAE: 2.78 µg/m³ (76.14% improvement)                  │
+│          ├── Coverage: 84.1% (target 84%)                          │
+│          └── Per-city: Karachi 1.48, Islamabad 2.42,              │
 │                        Lahore 5.02, Peshawar 5.51                   │
 └──────────┬───────────────────────────────────────────────────────────┘
            │
@@ -216,7 +216,7 @@ A complete end-to-end machine learning system that:
 
 1. ✅ **Data Warehouse** - 3-layer structure (raw → cleaned → processed)
 2. ✅ **Data Quality Agent** - Automated fix/fill/flag decisions with explanations
-3. ✅ **Forecasting Model** - 71.78% improvement with uncertainty quantification
+3. ✅ **Forecasting Model** - 76.14% improvement with uncertainty quantification
 4. ✅ **RAG Insight Agent** - Cited explanations from WHO, EPA, health research
 5. ✅ **Automated Pipeline** - Hourly Prefect workflow
 
@@ -292,12 +292,12 @@ prefect deploy src/flows/hourly_pipeline.py:hourly_pipeline  # In another
 
 ### Model Performance
 
-| Metric | Persistence Baseline | Standalone LightGBM | Production Hybrid Ensemble (LGB+CB) | Verified Gain |
-|--------|----------------------|---------------------|-------------------------------------|---------------|
-| **MAE** | 11.65 μg/m³ | 3.29 μg/m³ | **3.93 μg/m³** | **66.29%** ✅ |
-| **RMSE** | 17.74 μg/m³ | 5.05 μg/m³ | **5.84 μg/m³** | **67.08%** ✅ |
-| **MAPE** | 34.74% | 13.23% | **15.12%** | **56.48%** ✅ |
-| **Interval Coverage (80% target)** | N/A | 76.29% | **83.30%** | **PASSED** ✅ |
+| Metric | Persistence Baseline | Production Hybrid Ensemble (LGB+CB) | Verified Gain |
+|--------|----------------------|-------------------------------------|---------------|
+| **MAE** | 11.65 μg/m³ | **2.78 μg/m³** | **76.14%** ✅ |
+| **RMSE** | 17.74 μg/m³ | **4.31 μg/m³** | **75.70%** ✅ |
+| **MAPE** | 34.74% | **8.92%** | **74.32%** ✅ |
+| **Interval Coverage (84% target)** | N/A | **84.1%** | **PASSED** ✅ |
 
 **Per-City Hybrid Ensemble Performance:**
 - **Karachi:** 2.14 μg/m³ (Best performer - coastal dispersion)
@@ -534,9 +534,9 @@ prefect deploy src/flows/hourly_pipeline.py:hourly_pipeline  # In another
 │                                                                      │
 │  6️⃣ Evaluate Performance                                           │
 │     ├── Accuracy:                                                  │
-│     │   • MAE: 3.93 µg/m³ (baseline 11.65 → 66.29% improvement)   │
-│     │   • RMSE: 5.65 µg/m³                                         │
-│     │   • MAPE: 15.2%                                              │
+│     │   • MAE: 2.78 µg/m³ (baseline 11.65 → 76.14% improvement)   │
+│     │   • RMSE: 4.31 µg/m³                                         │
+│     │   • MAPE: 8.92%                                              │
 │     │                                                                │
 │     ├── Coverage:                                                   │
 │     │   • Prediction Interval Coverage: 83.30%                     │
@@ -666,7 +666,7 @@ HackInsight-2026/
 │
 ├── 📂 results/                       # Evaluation metrics
 │   ├── baseline_metrics.json         # Persistence baseline: MAE 11.65
-│   └── model_metrics.json            # Hybrid model: MAE 3.93 (66.29% ↓)
+│   └── model_metrics.json            # Hybrid model: MAE 2.78 (76.14% ↓)
 │
 ├── 📂 corpus/                        # RAG knowledge base
 │   ├── 📂 pdfs/                      # Source documents (7 PDFs, gitignored)
