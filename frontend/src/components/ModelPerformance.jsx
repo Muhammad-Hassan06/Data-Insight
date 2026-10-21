@@ -64,7 +64,7 @@ export default function ModelPerformance() {
             <Target size={20} />
           </div>
           <div className="stat-label">MAE (Error)</div>
-          <div className="stat-value">3.29</div>
+          <div className="stat-value">{accuracy.mae}</div>
           <div className="stat-change positive">
             <ArrowDown size={12} /> {accuracy.improvement_pct}% vs baseline
           </div>

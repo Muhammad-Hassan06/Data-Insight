@@ -129,7 +129,7 @@ A complete end-to-end machine learning system that:
 │          ├── MAE: 2.78 µg/m³ (76.14% improvement)                  │
 │          ├── Coverage: 84.1% (target 84%)                          │
 │          └── Per-city: Karachi 1.48, Islamabad 2.42,              │
-│                        Lahore 5.02, Peshawar 5.51                   │
+│                        Lahore 3.45, Peshawar 3.77                   │
 └──────────┬───────────────────────────────────────────────────────────┘
            │
            ▼
@@ -300,21 +300,21 @@ prefect deploy src/flows/hourly_pipeline.py:hourly_pipeline  # In another
 | **Interval Coverage (84% target)** | N/A | **84.1%** | **PASSED** ✅ |
 
 **Per-City Hybrid Ensemble Performance:**
-- **Karachi:** 2.14 μg/m³ (Best performer - coastal dispersion)
-- **Islamabad:** 3.61 μg/m³
-- **Peshawar:** 4.72 μg/m³
-- **Lahore:** 5.25 μg/m³ (Smog & inversion challenge)
+- **Karachi:** 1.48 μg/m³ (Best performer - coastal dispersion)
+- **Islamabad:** 2.42 μg/m³
+- **Lahore:** 3.45 μg/m³
+- **Peshawar:** 3.77 μg/m³ (Worst performer)
 
 > [!NOTE]
 > **Forecast Horizon & Diurnal Projection Methodology:**
-> The core ensemble forecaster predicts direct 1-hour ahead PM2.5 using immediate lag ($y[t-1\text{h}]$, Pearson $r=0.977$) alongside 24h/168h lags and meteorological drivers. For the 24-hour operational operational horizon served by the pipeline, predictions are generated via step projection modulated by Pakistan's empirical diurnal atmospheric curve ($1.0 + 0.15 \sin((H-6)\pi/12)$), reflecting morning traffic and nocturnal temperature inversion effects.
+> The core ensemble forecaster predicts 1-hour ahead PM2.5 using immediate lag ($y[t-1\text{h}]$, Pearson $r=0.977$) alongside 24h/168h lags and meteorological drivers. For the 24-hour operational horizon served by the pipeline, predictions are generated via step projection modulated by Pakistan's empirical diurnal atmospheric curve ($1.0 + 0.15 \sin((H-6)\pi/12)$), reflecting morning traffic and nocturnal temperature inversion effects. **This is not a direct 24-hour model** — it is a 1-hour model whose output is reshaped across the diurnal curve.
 
 ### Dataset Statistics
 
-- **PM2.5 Observations:** 338,985 hourly records (4 cities, 2022-2024)
+- **PM2.5 Observations:** 338,985 hourly records (4 cities, May 2025 – Oct 2026)
 - **Weather Records:** 70,176 hourly records
 - **Model-Ready Features:** 47,208 rows × 27 columns
-- **Training Split:** 80/20 time-based (37,765 train / 9,443 test)
+- **Training Split:** 80/20 time-based (37,765 train / 9,443 test; test set Jul–Oct 2026)
 
 ---
 
@@ -511,7 +511,6 @@ prefect deploy src/flows/hourly_pipeline.py:hourly_pipeline  # In another
 │     ├── For each city: 80% train / 20% test                        │
 │     ├── Train: 37,765 rows (Jun 2025 → Jul 2026)                  │
 │     └── Test:   9,443 rows (Jul 2026 → Oct 2026)                  │
-│         No random shuffle - time order preserved                    │
 │                                                                      │
 │  4️⃣ Train Hybrid Ensemble                                          │
 │     ├── LightGBM (3 models):                                       │
@@ -539,15 +538,15 @@ prefect deploy src/flows/hourly_pipeline.py:hourly_pipeline  # In another
 │     │   • MAPE: 8.92%                                              │
 │     │                                                                │
 │     ├── Coverage:                                                   │
-│     │   • Prediction Interval Coverage: 83.30%                     │
-│     │   • Target: 84% (80% interval)                               │
-│     │   • Calibration Error: 0.70 percentage points                │
+│     │   • Prediction Interval Coverage: 84.10%                     │
+│     │   • Target: 84% (84% interval)                               │
+│     │   • Calibration Error: 0.10 percentage points                │
 │     │                                                                │
 │     └── Fairness (Per-City MAE):                                   │
-│         • Karachi:   2.03 µg/m³ ✅ (best, coastal/stable)         │
-│         • Islamabad: 3.08 µg/m³ ✅                                 │
-│         • Peshawar:  5.51 µg/m³ ⚠️                                 │
-│         • Lahore:    5.02 µg/m³ ⚠️ (worst, winter smog)           │
+│         • Karachi:   1.48 µg/m³ ✅ (best, coastal/stable)         │
+│         • Islamabad: 2.42 µg/m³ ✅                                 │
+│         • Lahore:    3.45 µg/m³ ⚠️                                 │
+│         • Peshawar:  3.77 µg/m³ ⚠️ (worst, winter smog)           │
 │                                                                      │
 │  7️⃣ Save Models & Metrics                                          │
 │     ├── models/lgb_median.pkl, lgb_lower.pkl, lgb_upper.pkl       │
