@@ -60,9 +60,10 @@ async def get_city_forecast(city: str) -> CityForecastResponse:
     city_data = df[df["city"] == normalized_city].sort_values("forecast_hour")
 
     if city_data.empty:
-        # Re-generate if city subset is empty
-        df = _generate_seed_forecasts()
-        city_data = df[df["city"] == normalized_city].sort_values("forecast_hour")
+        raise HTTPException(
+            status_code=404,
+            detail=f"No forecast data available for {normalized_city}. Run the pipeline to generate forecasts."
+        )
 
     forecast_items: List[ForecastItem] = []
     for _, row in city_data.iterrows():
