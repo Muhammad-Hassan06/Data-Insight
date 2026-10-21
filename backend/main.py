@@ -6,7 +6,7 @@ Purpose: Main ASGI entry point serving PM2.5 forecasting, data quality metrics, 
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from backend.routers import forecast, quality, agent
+from backend.routers import forecast, quality, agent, pipeline
 
 app = FastAPI(
     title="Data Insight - PM2.5 Forecasting API",
@@ -35,6 +35,7 @@ app.add_middleware(
 app.include_router(forecast.router, prefix="/api")
 app.include_router(quality.router, prefix="/api")
 app.include_router(agent.router, prefix="/api")
+app.include_router(pipeline.router, prefix="/api")
 
 
 @app.get("/")

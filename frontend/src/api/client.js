@@ -30,4 +30,11 @@ export const agentAPI = {
   getCorpusInfo: () => api.get('/agent/corpus-info'),
 };
 
+// Pipeline API
+export const pipelineAPI = {
+  triggerPipeline: () => api.post('/pipeline/trigger'),
+  getPipelineStatus: () => api.get('/pipeline/status'),
+  getLiveStats: () => api.get('/pipeline/stats/live'),
+};
+
 export default api;

@@ -5,7 +5,7 @@ import {
 } from 'recharts';
 import { forecastAPI } from '../api/client';
 import { getMockCityForecast, CITY_META } from '../data/mockData';
-import { AlertCircle, TrendingUp, Wind, Droplets } from 'lucide-react';
+import { AlertCircle, TrendingUp, Wind, Droplets, RefreshCw } from 'lucide-react';
 
 // AQI breakpoints for PM2.5
 function getAQICategory(pm25) {
@@ -246,6 +246,34 @@ export default function ForecastChart({ city }) {
               Generated {generatedAt ? new Date(generatedAt).toLocaleString() : 'N/A'}
             </div>
           </div>
+          <button
+            onClick={loadForecast}
+            disabled={loading}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '8px',
+              padding: '10px 16px',
+              background: loading ? 'var(--bg-secondary)' : 'var(--accent-gradient)',
+              border: 'none',
+              borderRadius: '8px',
+              color: loading ? 'var(--text-muted)' : 'white',
+              fontSize: '0.875rem',
+              fontWeight: 600,
+              cursor: loading ? 'not-allowed' : 'pointer',
+              transition: 'all 0.2s ease',
+              opacity: loading ? 0.6 : 1,
+            }}
+            onMouseEnter={(e) => {
+              if (!loading) e.target.style.transform = 'translateY(-1px)';
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.transform = 'translateY(0)';
+            }}
+          >
+            <RefreshCw size={16} style={{ animation: loading ? 'spin 1s linear infinite' : 'none' }} />
+            {loading ? 'Refreshing...' : 'Refresh'}
+          </button>
         </div>
 
         <ResponsiveContainer width="100%" height={380}>
