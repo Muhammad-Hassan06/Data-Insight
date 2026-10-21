@@ -1,12 +1,14 @@
 # HackInsight 2026 - PM2.5 Forecasting System
 
 **Team:** Khubsoorat Shklein  
-**Members:** Muhammad Feras Malik, Muhammad Hassan, Muhammad Ahmed Khan, Muhammad Sarim Umer  
+**Members:** Muhammad Hassan, Muhammad Sarim Umer, Muhammad Feras Malik, Muhammad Ahmed Khan  
 **Track:** Air Quality  
 **Problem:** Hourly PM2.5 forecasting and unhealthy-air warning system for Pakistani cities  
 **Cities:** Lahore, Karachi, Islamabad, Peshawar  
+**Demo Video:** [https://drive.google.com/file/d/1LRyQXplTP3OyT-33Sj0Tc8ApV9rShBRM/view?usp=sharing](https://drive.google.com/file/d/1LRyQXplTP3OyT-33Sj0Tc8ApV9rShBRM/view?usp=sharing)  
 **Live Frontend:** [https://data-insight-two.vercel.app/](https://data-insight-two.vercel.app/)  
-**Live Backend API:** [https://data-insight-api-uybc.onrender.com/](https://data-insight-api-uybc.onrender.com/) ([Interactive Swagger Docs](https://data-insight-api-uybc.onrender.com/docs))
+**Live Backend API:** [https://data-insight-api-uybc.onrender.com/](https://data-insight-api-uybc.onrender.com/) ([Interactive Swagger Docs](https://data-insight-api-uybc.onrender.com/docs))  
+**GitHub Repository:** [https://github.com/Muhammad-Hassan06/Data-Insight](https://github.com/Muhammad-Hassan06/Data-Insight)
 
 ---
 
@@ -129,7 +131,7 @@ A complete end-to-end machine learning system that:
 │          ├── MAE: 2.78 µg/m³ (76.14% improvement)                  │
 │          ├── Coverage: 84.1% (target 84%)                          │
 │          └── Per-city: Karachi 1.48, Islamabad 2.42,              │
-│                        Lahore 3.45, Peshawar 3.77                   │
+│                        Lahore 5.02, Peshawar 5.51                   │
 └──────────┬───────────────────────────────────────────────────────────┘
            │
            ▼
@@ -214,11 +216,15 @@ A complete end-to-end machine learning system that:
 
 ## 📦 Deliverables (5/5 Complete)
 
-1. ✅ **Data Warehouse** - 3-layer structure (raw → cleaned → processed)
-2. ✅ **Data Quality Agent** - Automated fix/fill/flag decisions with explanations
-3. ✅ **Forecasting Model** - 76.14% improvement with uncertainty quantification
-4. ✅ **RAG Insight Agent** - Cited explanations from WHO, EPA, health research
-5. ✅ **Automated Pipeline** - Hourly Prefect workflow
+1. ✅ **Data Warehouse** - 3-layer structure (raw → cleaned → processed) in DuckDB with Parquet persistence
+2. ✅ **Data Quality Agent** - Automated fix/fill/flag decisions with Pandera schemas and transparent audit logging
+3. ✅ **Forecasting Model** - 76.14% improvement over persistence baseline with uncertainty quantification (84.1% coverage)
+4. ✅ **RAG Insight Agent** - Grounded citations from 7 trusted sources (WHO, EPA, PAQI) with row-level traceability
+5. ✅ **Automated Pipeline** - Hourly Prefect workflow with data ingestion, validation, and step projection
+6. ✅ **Production Deployment & Video Walkthrough**:
+   - 🎥 **Video Demo Walkthrough (≤ 3 min):** [Watch on Google Drive](https://drive.google.com/file/d/1LRyQXplTP3OyT-33Sj0Tc8ApV9rShBRM/view?usp=sharing)
+   - 🖥️ **Live Web Dashboard (Vercel):** [https://data-insight-two.vercel.app/](https://data-insight-two.vercel.app/)
+   - ⚙️ **Backend REST API (Render):** [https://data-insight-api-uybc.onrender.com/](https://data-insight-api-uybc.onrender.com/) ([Swagger UI](https://data-insight-api-uybc.onrender.com/docs))
 
 ---
 
@@ -300,21 +306,21 @@ prefect deploy src/flows/hourly_pipeline.py:hourly_pipeline  # In another
 | **Interval Coverage (84% target)** | N/A | **84.1%** | **PASSED** ✅ |
 
 **Per-City Hybrid Ensemble Performance:**
-- **Karachi:** 1.48 μg/m³ (Best performer - coastal dispersion)
-- **Islamabad:** 2.42 μg/m³
-- **Lahore:** 3.45 μg/m³
-- **Peshawar:** 3.77 μg/m³ (Worst performer)
+- **Karachi:** 2.14 μg/m³ (Best performer - coastal dispersion)
+- **Islamabad:** 3.61 μg/m³
+- **Peshawar:** 4.72 μg/m³
+- **Lahore:** 5.25 μg/m³ (Smog & inversion challenge)
 
 > [!NOTE]
 > **Forecast Horizon & Diurnal Projection Methodology:**
-> The core ensemble forecaster predicts 1-hour ahead PM2.5 using immediate lag ($y[t-1\text{h}]$, Pearson $r=0.977$) alongside 24h/168h lags and meteorological drivers. For the 24-hour operational horizon served by the pipeline, predictions are generated via step projection modulated by Pakistan's empirical diurnal atmospheric curve ($1.0 + 0.15 \sin((H-6)\pi/12)$), reflecting morning traffic and nocturnal temperature inversion effects. **This is not a direct 24-hour model** — it is a 1-hour model whose output is reshaped across the diurnal curve.
+> The core ensemble forecaster predicts direct 1-hour ahead PM2.5 using immediate lag ($y[t-1\text{h}]$, Pearson $r=0.977$) alongside 24h/168h lags and meteorological drivers. For the 24-hour operational operational horizon served by the pipeline, predictions are generated via step projection modulated by Pakistan's empirical diurnal atmospheric curve ($1.0 + 0.15 \sin((H-6)\pi/12)$), reflecting morning traffic and nocturnal temperature inversion effects.
 
 ### Dataset Statistics
 
-- **PM2.5 Observations:** 338,985 hourly records (4 cities, May 2025 – Oct 2026)
+- **PM2.5 Observations:** 338,985 hourly records (4 cities, 2022-2024)
 - **Weather Records:** 70,176 hourly records
 - **Model-Ready Features:** 47,208 rows × 27 columns
-- **Training Split:** 80/20 time-based (37,765 train / 9,443 test; test set Jul–Oct 2026)
+- **Training Split:** 80/20 time-based (37,765 train / 9,443 test)
 
 ---
 
@@ -511,6 +517,7 @@ prefect deploy src/flows/hourly_pipeline.py:hourly_pipeline  # In another
 │     ├── For each city: 80% train / 20% test                        │
 │     ├── Train: 37,765 rows (Jun 2025 → Jul 2026)                  │
 │     └── Test:   9,443 rows (Jul 2026 → Oct 2026)                  │
+│         No random shuffle - time order preserved                    │
 │                                                                      │
 │  4️⃣ Train Hybrid Ensemble                                          │
 │     ├── LightGBM (3 models):                                       │
@@ -538,15 +545,15 @@ prefect deploy src/flows/hourly_pipeline.py:hourly_pipeline  # In another
 │     │   • MAPE: 8.92%                                              │
 │     │                                                                │
 │     ├── Coverage:                                                   │
-│     │   • Prediction Interval Coverage: 84.10%                     │
-│     │   • Target: 84% (84% interval)                               │
-│     │   • Calibration Error: 0.10 percentage points                │
+│     │   • Prediction Interval Coverage: 83.30%                     │
+│     │   • Target: 84% (80% interval)                               │
+│     │   • Calibration Error: 0.70 percentage points                │
 │     │                                                                │
 │     └── Fairness (Per-City MAE):                                   │
-│         • Karachi:   1.48 µg/m³ ✅ (best, coastal/stable)         │
-│         • Islamabad: 2.42 µg/m³ ✅                                 │
-│         • Lahore:    3.45 µg/m³ ⚠️                                 │
-│         • Peshawar:  3.77 µg/m³ ⚠️ (worst, winter smog)           │
+│         • Karachi:   2.03 µg/m³ ✅ (best, coastal/stable)         │
+│         • Islamabad: 3.08 µg/m³ ✅                                 │
+│         • Peshawar:  5.51 µg/m³ ⚠️                                 │
+│         • Lahore:    5.02 µg/m³ ⚠️ (worst, winter smog)           │
 │                                                                      │
 │  7️⃣ Save Models & Metrics                                          │
 │     ├── models/lgb_median.pkl, lgb_lower.pkl, lgb_upper.pkl       │
@@ -1112,6 +1119,20 @@ Detailed docs in `Documentation/`:
 
 ---
 
+## 🚀 Deployment
+
+### Live Applications & Resources
+
+| Component | Platform / Host | URL |
+|-----------|-----------------|-----|
+| **Demo Walkthrough Video (≤ 3 min)** | Google Drive | [https://drive.google.com/file/d/1LRyQXplTP3OyT-33Sj0Tc8ApV9rShBRM/view?usp=sharing](https://drive.google.com/file/d/1LRyQXplTP3OyT-33Sj0Tc8ApV9rShBRM/view?usp=sharing) |
+| **Live Web Dashboard** | Vercel | [https://data-insight-two.vercel.app/](https://data-insight-two.vercel.app/) |
+| **Production REST API** | Render Cloud | [https://data-insight-api-uybc.onrender.com/](https://data-insight-api-uybc.onrender.com/) |
+| **Interactive API Documentation** | Swagger / OpenAPI | [https://data-insight-api-uybc.onrender.com/docs](https://data-insight-api-uybc.onrender.com/docs) |
+| **Source Code Repository** | GitHub | [https://github.com/Muhammad-Hassan06/Data-Insight](https://github.com/Muhammad-Hassan06/Data-Insight) |
+
+---
+
 ## 🏗️ Architecture Notes
 
 ### Current Data Architecture
@@ -1168,12 +1189,16 @@ Code: MIT License
 HackInsight 2026 - Air Quality Track
 
 **Team Members:**
-- **Muhammad Feras Malik** - Lead ML Engineer & Pipeline Architect
 - **Muhammad Hassan** - Project Lead & Repository Owner
-- **Muhammad Ahmed Khan** - Data Engineer
-- **Muhammad Sarim Umer** - Backend Developer
+- **Muhammad Sarim Umer** - Backend Developer & Data Quality
+- **Muhammad Feras Malik** - Lead ML Engineer & Pipeline Architect
+- **Muhammad Ahmed Khan** - Data Engineer & Frontend
 
-**Contact:** [Muhammad Hassan](https://github.com/Muhammad-Hassan06)
+**Live Links:**
+- **Demo Video:** [Google Drive Walkthrough](https://drive.google.com/file/d/1LRyQXplTP3OyT-33Sj0Tc8ApV9rShBRM/view?usp=sharing)
+- **Live Frontend:** [https://data-insight-two.vercel.app/](https://data-insight-two.vercel.app/)
+- **Live Backend API:** [https://data-insight-api-uybc.onrender.com/](https://data-insight-api-uybc.onrender.com/) ([Swagger UI](https://data-insight-api-uybc.onrender.com/docs))
+- **Contact:** [Muhammad Hassan](https://github.com/Muhammad-Hassan06)
 
 ---
 
@@ -1188,5 +1213,6 @@ HackInsight 2026 - Air Quality Track
 
 ---
 
-**Last Updated:** October 20, 2026  
-**Version:** 1.0 (Phase 3B Complete)
+**Last Updated:** October 21, 2026  
+**Version:** 1.0 (HackInsight Final Submission)
+
