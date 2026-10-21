@@ -188,15 +188,15 @@ export const PIPELINE_STAGES = [
 ];
 
 export const CORPUS_INFO = {
-  total_chunks: 247,
+  total_chunks: 2614,
   sources: {
-    'WHO Air Quality Guidelines': 42,
-    'Pakistan EPA Smog Advisory': 31,
-    'Lahore Air Quality Report 2024': 38,
-    'Health Impacts of PM2.5': 29,
-    'Health Under Haze': 35,
-    'Unveiling Karachi Air (PAQI)': 37,
-    'Unveiling Pakistan Air Pollution (PAQI)': 35,
+    'WHO Air Quality Guidelines': 36,
+    'Pakistan EPA Smog Advisory': 100,
+    'Lahore Air Quality Report 2024': 8,
+    'Health Impacts of PM2.5': 125,
+    'Health Under Haze Study': 209,
+    'Unveiling Karachi Air (PAQI)': 405,
+    'Unveiling Pakistan Air Pollution (PAQI)': 1731,
   },
   status: 'ready',
 };

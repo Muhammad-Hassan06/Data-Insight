@@ -128,7 +128,7 @@ export default function DataPipeline() {
               Collection Start
             </div>
             <div style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--text-primary)' }}>
-              Jun 1, 2022
+              May 24, 2025
             </div>
           </div>
           <div>
@@ -136,7 +136,7 @@ export default function DataPipeline() {
               Collection End
             </div>
             <div style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--text-primary)' }}>
-              Oct 20, 2026
+              Oct 18, 2026
             </div>
           </div>
           <div>
@@ -144,7 +144,7 @@ export default function DataPipeline() {
               Duration
             </div>
             <div style={{ fontSize: '0.85rem', fontWeight: 600, color: '#22c55e' }}>
-              2+ years
+              17 months
             </div>
           </div>
         </div>
@@ -209,7 +209,7 @@ export default function DataPipeline() {
               RAG Knowledge Corpus
             </div>
             <div className="card-subtitle">
-              {CORPUS_INFO.total_chunks} document chunks from {Object.keys(CORPUS_INFO.sources).length} trusted sources indexed in ChromaDB
+              {CORPUS_INFO.total_chunks.toLocaleString()} document chunks from {Object.keys(CORPUS_INFO.sources).length} trusted sources indexed in ChromaDB
             </div>
           </div>
           <div className={`status-badge ${CORPUS_INFO.status === 'ready' ? 'fresh' : 'stale'}`}>

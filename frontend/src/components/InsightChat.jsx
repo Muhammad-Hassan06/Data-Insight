@@ -84,7 +84,7 @@ export default function InsightChat() {
               RAG Insight Agent
             </div>
             <div className="card-subtitle">
-              Ask questions about air quality — powered by {CORPUS_INFO.total_chunks} document chunks from {Object.keys(CORPUS_INFO.sources).length} trusted sources
+              Ask questions about air quality — powered by {CORPUS_INFO.total_chunks.toLocaleString()} document chunks from {Object.keys(CORPUS_INFO.sources).length} trusted sources
             </div>
           </div>
         </div>
